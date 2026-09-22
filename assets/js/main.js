@@ -32,7 +32,18 @@
   function updateToggleIcon(theme) {
     const thumb = document.querySelector('.toggle-thumb');
     if (!thumb) return;
-    thumb.textContent = theme === 'light' ? '☀️' : '🌙';
+    // SVG ikonkalarni almashtirish
+    const moonIcon = thumb.querySelector('.theme-icon-moon');
+    const sunIcon = thumb.querySelector('.theme-icon-sun');
+    if (moonIcon && sunIcon) {
+      if (theme === 'light') {
+        moonIcon.style.display = 'none';
+        sunIcon.style.display = 'block';
+      } else {
+        moonIcon.style.display = 'block';
+        sunIcon.style.display = 'none';
+      }
+    }
   }
 
   /* -------------------------------------------------------
@@ -136,11 +147,11 @@
   ------------------------------------------------------- */
   const typedTextEl = document.getElementById('typed-text');
   const phrases = [
-    'Mobile Apps',
-    'Web Platforms',
-    'Backend Systems',
-    'UI/UX Design',
-    'Digital Solutions',
+    'Zamonaviy mobil ilovalar',
+    'Keng ko\'lamli veb-platformalar',
+    'Kuchli backend tizimlar',
+    'Mukammal UI/UX dizayn',
+    'Raqamli marketing yechimlar',
   ];
   let phraseIndex = 0;
   let charIndex = 0;
@@ -367,22 +378,24 @@
       const email = contactForm.querySelector('#contact-email').value.trim();
       const message = contactForm.querySelector('#contact-message').value.trim();
 
+      const phone = contactForm.querySelector('#contact-phone') ? contactForm.querySelector('#contact-phone').value.trim() : '';
+
       if (!name || !email || !message) {
-        showFormStatus('Iltimos, barcha maydonlarni to\'ldiring.', 'error');
+        showFormStatus('Iltimos, barcha majburiy maydonlarni to\'ldiring.', 'error');
         return;
       }
       if (!isValidEmail(email)) {
-        showFormStatus('Iltimos, to\'g\'ri email kiriting.', 'error');
+        showFormStatus('Iltimos, to\'g\'ri elektron pochta manzilini kiriting.', 'error');
         return;
       }
 
       const submitBtn = contactForm.querySelector('.form-submit-btn');
-      submitBtn.textContent = 'Yuborilmoqda...';
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Yuborilmoqda...';
       submitBtn.disabled = true;
 
       // Simulate form submission (replace with actual backend)
       setTimeout(() => {
-        showFormStatus('Xabaringiz muvaffaqiyatli yuborildi! Tez orada bog\'lanamiz. ✓', 'success');
+        showFormStatus('✓ Xabaringiz muvaffaqiyatli yuborildi! Tez orada siz bilan bog\'lanamiz.', 'success');
         contactForm.reset();
         submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Xabar yuborish';
         submitBtn.disabled = false;
@@ -417,7 +430,7 @@
         return;
       }
       const btn = newsletterForm.querySelector('button');
-      btn.textContent = '✓ Obuna bo\'ldingiz!';
+      btn.innerHTML = '<i class="fas fa-check"></i> Obuna bo\'ldingiz!';
       btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
       emailInput.value = '';
       setTimeout(() => {

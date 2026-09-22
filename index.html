@@ -6,16 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO Meta Tags -->
-  <title>Olab Tech — Mobile & Web Development Company | Tashkent, Uzbekistan</title>
-  <meta name="description" content="Olab Tech — Toshkent shahridagi mobile va web ilovalar ishlab chiqish kompaniyasi. Swift, Kotlin, Java, React texnologiyalari bilan premium raqamli yechimlar.">
-  <meta name="keywords" content="mobile app development, web development, iOS, Android, Tashkent, Uzbekistan, Swift, Kotlin, Java">
+  <title>Olab Tech — Mobile va Web Ilovalar Ishlab Chiqish | Toshkent, O'zbekiston</title>
+  <meta name="description" content="Olab Tech — Toshkent shahridagi mobil va veb-ilovalar ishlab chiqish kompaniyasi. Swift, Kotlin, Java, React texnologiyalari bilan yuqori sifatli raqamli yechimlar.">
+  <meta name="keywords" content="mobile app development, web development, iOS, Android, Toshkent, O'zbekiston, Swift, Kotlin, Java, React">
   <meta name="author" content="Olab Tech">
   <meta name="robots" content="index, follow">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Olab Tech — Mobile & Web Development">
-  <meta property="og:description" content="Premium mobile & web development company from Tashkent, Uzbekistan.">
+  <meta property="og:title" content="Olab Tech — Mobil va Web Ilovalar Ishlab Chiqish">
+  <meta property="og:description" content="Toshkentdagi premium mobil va veb-ilovalar ishlab chiqish kompaniyasi.">
   <meta property="og:url" content="https://olabtech.uz">
   <meta property="og:image" content="assets/images/logo.png">
 
@@ -78,7 +78,24 @@
           <label class="theme-toggle" id="theme-toggle-label" title="Mavzuni o'zgartirish">
             <input type="checkbox" id="theme-toggle-input">
             <div class="toggle-track">
-              <div class="toggle-thumb">🌙</div>
+              <div class="toggle-thumb" id="theme-toggle-thumb">
+                <!-- Moon icon (default dark) -->
+                <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z" fill="currentColor"/>
+                </svg>
+                <!-- Sun icon -->
+                <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="5" fill="currentColor"/>
+                  <line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
             </div>
           </label>
 
@@ -87,7 +104,7 @@
           </a>
 
           <!-- Hamburger -->
-          <button class="hamburger" id="hamburger" aria-label="Menu">
+          <button class="hamburger" id="hamburger" aria-label="Menyu">
             <span></span>
             <span></span>
             <span></span>
@@ -100,13 +117,13 @@
 
   <!-- Mobile Nav -->
   <nav class="mobile-nav" id="mobile-nav">
-    <a href="#hero">🏠 Bosh sahifa</a>
-    <a href="#about">💡 Biz haqimizda</a>
-    <a href="#services">⚙️ Xizmatlar</a>
-    <a href="#technologies">🔧 Texnologiyalar</a>
-    <a href="#portfolio">🎨 Loyihalar</a>
-    <a href="#team">👥 Jamoa</a>
-    <a href="#contact">📩 Aloqa</a>
+    <a href="#hero"><i class="fas fa-house"></i> Bosh sahifa</a>
+    <a href="#about"><i class="fas fa-lightbulb"></i> Biz haqimizda</a>
+    <a href="#services"><i class="fas fa-gear"></i> Xizmatlar</a>
+    <a href="#technologies"><i class="fas fa-microchip"></i> Texnologiyalar</a>
+    <a href="#portfolio"><i class="fas fa-layer-group"></i> Loyihalar</a>
+    <a href="#team"><i class="fas fa-users"></i> Jamoa</a>
+    <a href="#contact"><i class="fas fa-envelope"></i> Aloqa</a>
   </nav>
 
   <!-- ======================================================
@@ -132,17 +149,17 @@
           </div>
 
           <h1 class="hero-title">
-            Biz yaratamiz<br>
+            Biznesingiz uchun<br>
             <span class="gradient-text">Raqamli Kelajak</span>
           </h1>
 
           <div class="typing-container">
-            Mutaxassislarimiz: <span id="typed-text"></span><span class="typing-cursor"></span>
+            Bizning asosiy yo'nalishlarimiz: <span id="typed-text"></span><span class="typing-cursor"></span>
           </div>
 
           <p class="hero-desc">
-            Olab Tech — mobile ilovalar va web platformalar ishlab chiquvchi kompaniya.
-            Bizneslar uchun Swift, Kotlin, Java va zamonaviy web texnologiyalari orqali
+            Olab Tech — mobil ilovalar va veb-platformalar ishlab chiquvchi kompaniya.
+            Bizneslar uchun Swift, Kotlin, Java va zamonaviy veb-texnologiyalari orqali
             yuqori sifatli raqamli yechimlar yaratamiz.
           </p>
 
@@ -159,12 +176,12 @@
           <div class="hero-stats">
             <div class="hero-stat-item">
               <div class="hero-stat-number">50+</div>
-              <div class="hero-stat-label">Loyihalar</div>
+              <div class="hero-stat-label">Loyiha</div>
             </div>
             <div class="hero-stat-divider"></div>
             <div class="hero-stat-item">
               <div class="hero-stat-number">30+</div>
-              <div class="hero-stat-label">Mijozlar</div>
+              <div class="hero-stat-label">Mijoz</div>
             </div>
             <div class="hero-stat-divider"></div>
             <div class="hero-stat-item">
@@ -185,26 +202,32 @@
 
             <!-- Floating badges -->
             <div class="floating-badge badge-1">
-              <span class="floating-badge-icon">📱</span>
+              <span class="floating-badge-icon">
+                <i class="fas fa-mobile-screen"></i>
+              </span>
               <div>
-                <div class="floating-badge-text">iOS & Android</div>
-                <div class="floating-badge-sub">Native development</div>
+                <div class="floating-badge-text">iOS &amp; Android</div>
+                <div class="floating-badge-sub">Native dasturlash</div>
               </div>
             </div>
 
             <div class="floating-badge badge-2">
-              <span class="floating-badge-icon">⚡</span>
+              <span class="floating-badge-icon">
+                <i class="fas fa-bolt"></i>
+              </span>
               <div>
-                <div class="floating-badge-text">Fast delivery</div>
-                <div class="floating-badge-sub">On-time, every time</div>
+                <div class="floating-badge-text">Tezkor topshirish</div>
+                <div class="floating-badge-sub">Har doim belgilangan vaqtda</div>
               </div>
             </div>
 
             <div class="floating-badge badge-3">
-              <span class="floating-badge-icon">🔒</span>
+              <span class="floating-badge-icon">
+                <i class="fas fa-shield-halved"></i>
+              </span>
               <div>
-                <div class="floating-badge-text">Secure code</div>
-                <div class="floating-badge-sub">Enterprise grade</div>
+                <div class="floating-badge-text">Xavfsiz kod</div>
+                <div class="floating-badge-sub">Enterprise darajasida</div>
               </div>
             </div>
 
@@ -217,18 +240,18 @@
                   <div class="phone-stats-icon"><i class="fas fa-chart-line"></i></div>
                   <div class="phone-stats-info">
                     <div class="phone-stats-value">+24.5%</div>
-                    <div class="phone-stats-sub">Foyda o'sishi</div>
+                    <div class="phone-stats-sub">Daromad o'sishi</div>
                   </div>
                 </div>
                 <div class="phone-app-row">
                   <div class="phone-app-card">
-                    <div class="phone-app-icon">📊</div>
-                    <div class="phone-app-title">Analytics</div>
+                    <div class="phone-app-icon"><i class="fas fa-chart-bar" style="color:#6366f1"></i></div>
+                    <div class="phone-app-title">Tahlillar</div>
                     <div class="phone-chart-bar"><div class="phone-chart-fill" style="width:75%"></div></div>
                   </div>
                   <div class="phone-app-card">
-                    <div class="phone-app-icon">💬</div>
-                    <div class="phone-app-title">Messages</div>
+                    <div class="phone-app-icon"><i class="fas fa-message" style="color:#06b6d4"></i></div>
+                    <div class="phone-app-title">Xabarlar</div>
                     <div class="phone-chart-bar"><div class="phone-chart-fill" style="width:60%"></div></div>
                   </div>
                 </div>
@@ -236,25 +259,25 @@
                   <div class="phone-stats-icon" style="background:rgba(6,182,212,0.2);"><i class="fas fa-users" style="color:#06b6d4"></i></div>
                   <div class="phone-stats-info">
                     <div class="phone-stats-value">12,847</div>
-                    <div class="phone-stats-sub">Faol foydalanuvchi</div>
+                    <div class="phone-stats-sub">Faol foydalanuvchilar</div>
                   </div>
                 </div>
                 <div class="phone-app-row">
                   <div class="phone-app-card">
-                    <div class="phone-app-icon">🚀</div>
-                    <div class="phone-app-title">Projects</div>
+                    <div class="phone-app-icon"><i class="fas fa-rocket" style="color:#8b5cf6"></i></div>
+                    <div class="phone-app-title">Loyihalar</div>
                     <div class="phone-chart-bar"><div class="phone-chart-fill" style="width:90%"></div></div>
                   </div>
                   <div class="phone-app-card">
-                    <div class="phone-app-icon">⭐</div>
-                    <div class="phone-app-title">Rating</div>
+                    <div class="phone-app-icon"><i class="fas fa-star" style="color:#f59e0b"></i></div>
+                    <div class="phone-app-title">Reyting</div>
                     <div class="phone-chart-bar"><div class="phone-chart-fill" style="width:98%"></div></div>
                   </div>
                 </div>
                 <div class="phone-stats-card">
                   <div class="phone-stats-icon" style="background:rgba(139,92,246,0.2);"><i class="fas fa-code" style="color:#8b5cf6"></i></div>
                   <div class="phone-stats-info">
-                    <div class="phone-stats-value">100K+ satir</div>
+                    <div class="phone-stats-value">100K+ satr</div>
                     <div class="phone-stats-sub">Sifatli kod</div>
                   </div>
                 </div>
@@ -272,7 +295,7 @@
       <div class="scroll-mouse">
         <div class="scroll-wheel"></div>
       </div>
-      <span>Pastga aylantiring</span>
+      <span>Batafsil quyida</span>
     </div>
   </section>
 
@@ -284,10 +307,10 @@
 
       <div class="section-header">
         <div class="section-label reveal">Biz haqimizda</div>
-        <h2 class="section-title reveal">Raqamli transformatsiya<br>hamkori</h2>
+        <h2 class="section-title reveal">Raqamli o'zgarishlar<br>uchun ishonchli sherik</h2>
         <p class="section-subtitle reveal">
           Olab Tech — 2019 yildan buyon O'zbekistondagi bizneslar uchun zamonaviy
-          mobile ilovalar va web platformalar yaratib kelayotgan IT kompaniyasi.
+          mobil ilovalar va veb-platformalar yaratib kelayotgan IT kompaniyasi.
         </p>
       </div>
 
@@ -297,7 +320,7 @@
           <div class="offer-icon-wrap">
             <i class="fas fa-laptop-code"></i>
           </div>
-          <h4>Premium Dizayn & Interfeys</h4>
+          <h4>Premium Dizayn va Interfeys</h4>
           <p>Foydalanuvchi tajribasini birinchi o'ringa qo'ygan zamonaviy UI/UX dizayn. Har bir piksel maqsadga xizmat qiladi.</p>
         </div>
 
@@ -305,16 +328,16 @@
           <div class="offer-icon-wrap">
             <i class="fas fa-layer-group"></i>
           </div>
-          <h4>Kuchli Brending</h4>
-          <p>Brendingiz raqamli va jismoniy muhitda bir xil kuchli ko'rinishda. Logo, identifikatsiya, marketing materiallar.</p>
+          <h4>Kuchli Brend Identifikatsiyasi</h4>
+          <p>Brendingiz raqamli va jismoniy muhitda bir xil kuchli ko'rinishda. Logotip, korporativ identifikatsiya, marketing materiallar.</p>
         </div>
 
         <div class="glass-card offer-card reveal reveal-delay-3">
           <div class="offer-icon-wrap">
             <i class="fas fa-headset"></i>
           </div>
-          <h4>Doimiy Qo'llab-Quvvatlash</h4>
-          <p>Loyiha tugagandan so'ng ham yon tarafingizda. Texnik yordam, yangilovlar va kengaytirishlar uchun 7/24 tayyor.</p>
+          <h4>Uzluksiz Texnik Qo'llab-quvvatlash</h4>
+          <p>Loyiha topshirilgach ham doim siz bilan birgamiz. Texnik yordam, dasturiy yangilanishlar va kengaytirishlar uchun 7/24 tayyor.</p>
         </div>
       </div>
 
@@ -325,30 +348,30 @@
             <h3>Nima uchun aynan <span style="background:var(--accent-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Olab Tech?</span></h3>
             <p>
               Biz shunchaki kod yozmaymiz — biznesingizning raqamli versiyasini quramiz.
-              Har bir loyihaga startup kabi jiddiylik va korporativ darajadagi mas'uliyat
+              Har bir loyihaga startap chaqqonligi va korporativ darajadagi mas'uliyat
               bilan yondoshamiz.
             </p>
             <p>
               Toshkent markazida joylashgan jamoamiz O'zbekiston, Rossiya va xalqaro
-              mijozlar bilan ishlash tajribasiga ega. Mobile ilovalardan tortib to
+              mijozlar bilan ishlash tajribasiga ega. Mobil ilovalardan tortib to
               murakkab backend tizimlargacha — barchasi bir joyda.
             </p>
             <div class="about-highlights">
               <div class="about-highlight-item">
-                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-circle-check"></i>
                 <span>Agile metodologiyasi — shaffof jarayon, haftalik hisobotlar</span>
               </div>
               <div class="about-highlight-item">
-                <i class="fas fa-check-circle"></i>
-                <span>NDA shartnomasi — sizning g'oyalaringiz himoyalangan</span>
+                <i class="fas fa-circle-check"></i>
+                <span>NDA shartnomasi — g'oyalaringiz qonun bilan himoyalangan</span>
               </div>
               <div class="about-highlight-item">
-                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-circle-check"></i>
                 <span>Moslashuvchan narxlar — har qanday byudjet uchun yechim</span>
               </div>
               <div class="about-highlight-item">
-                <i class="fas fa-check-circle"></i>
-                <span>O'z vaqtida yetkazib berish — SLA kafolati</span>
+                <i class="fas fa-circle-check"></i>
+                <span>O'z vaqtida topshirish — SLA kafolati bilan</span>
               </div>
             </div>
           </div>
@@ -415,10 +438,10 @@
 
       <div class="section-header">
         <div class="section-label reveal">Xizmatlarimiz</div>
-        <h2 class="section-title reveal">Nima qilamiz?</h2>
+        <h2 class="section-title reveal">Biz taqdim etadigan xizmatlar</h2>
         <p class="section-subtitle reveal">
           Raqamli mahsulotlarni g'oyadan ishlab chiqish va joylashtirishgacha
-          to'liq sikl bilan qo'llab-quvvatlaymiz.
+          to'liq tsikl davomida qo'llab-quvvatlaymiz.
         </p>
       </div>
 
@@ -426,9 +449,9 @@
 
         <div class="glass-card service-card reveal reveal-delay-1">
           <div class="service-number">01</div>
-          <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
-          <h4>Mobile Ilovalar</h4>
-          <p>iOS va Android uchun native va cross-platform ilovalar. App Store va Google Play'da chiqarishgacha to'liq qo'llab-quvvatlash.</p>
+          <div class="service-icon"><i class="fas fa-mobile-screen"></i></div>
+          <h4>Mobil Ilovalar</h4>
+          <p>iOS va Android uchun native va cross-platform ilovalar. App Store va Google Play'ga chiqarishgacha to'liq qo'llab-quvvatlash.</p>
           <div class="service-tags">
             <span class="service-tag">Swift</span>
             <span class="service-tag">Kotlin</span>
@@ -439,8 +462,8 @@
         <div class="glass-card service-card reveal reveal-delay-2">
           <div class="service-number">02</div>
           <div class="service-icon"><i class="fas fa-globe"></i></div>
-          <h4>Web Ilovalar</h4>
-          <p>Zamonaviy, tez va responsiv web saytlar va web ilovalar. SPA, PWA, va enterprise darajadagi platformalar.</p>
+          <h4>Veb-Ilovalar</h4>
+          <p>Zamonaviy, tez va moslashuvchan veb-saytlar hamda veb-ilovalar. SPA, PWA va enterprise darajadagi platformalar.</p>
           <div class="service-tags">
             <span class="service-tag">React</span>
             <span class="service-tag">Next.js</span>
@@ -462,37 +485,37 @@
 
         <div class="glass-card service-card reveal reveal-delay-1">
           <div class="service-number">04</div>
-          <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+          <div class="service-icon"><i class="fas fa-pen-nib"></i></div>
           <h4>UI/UX Dizayn</h4>
-          <p>Foydalanuvchi markazlashgan dizayn. Wireframe, prototip, user testing va to'liq dizayn tizimi yaratish.</p>
+          <p>Foydalanuvchiga yo'naltirilgan dizayn. Chizma, prototip, foydalanuvchi testlari va to'liq dizayn tizimi yaratish.</p>
           <div class="service-tags">
             <span class="service-tag">Figma</span>
-            <span class="service-tag">Prototyping</span>
-            <span class="service-tag">Design System</span>
+            <span class="service-tag">Prototiplash</span>
+            <span class="service-tag">Dizayn tizimi</span>
           </div>
         </div>
 
         <div class="glass-card service-card reveal reveal-delay-2">
           <div class="service-number">05</div>
           <div class="service-icon"><i class="fas fa-bullseye"></i></div>
-          <h4>Brending & Marketing</h4>
-          <p>Brendingizni raqamli dunyoda kuchaytirish. Logo, korporativ identifikatsiya, digital marketing strategiyasi.</p>
+          <h4>Brending va Marketing</h4>
+          <p>Brendingizni raqamli dunyoda mustahkamlash. Logotip, korporativ identifikatsiya, raqamli marketing strategiyasi.</p>
           <div class="service-tags">
-            <span class="service-tag">Logo Design</span>
-            <span class="service-tag">Brand Identity</span>
+            <span class="service-tag">Logotip dizayni</span>
+            <span class="service-tag">Brend identifikatsiyasi</span>
             <span class="service-tag">SEO</span>
           </div>
         </div>
 
         <div class="glass-card service-card reveal reveal-delay-3">
           <div class="service-number">06</div>
-          <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+          <div class="service-icon"><i class="fas fa-shield-halved"></i></div>
           <h4>Texnik Qo'llab-quvvatlash</h4>
-          <p>Loyiha ishga tushgandan so'ng ham 7/24 monitoring, yangilovlar, xavfsizlik tekshiruvlari va optimizatsiya.</p>
+          <p>Loyiha ishga tushgandan so'ng ham 7/24 monitoring, dasturiy yangilanishlar, xavfsizlik tekshiruvlari va optimallashtirish.</p>
           <div class="service-tags">
             <span class="service-tag">Monitoring</span>
-            <span class="service-tag">Security</span>
-            <span class="service-tag">Optimization</span>
+            <span class="service-tag">Xavfsizlik</span>
+            <span class="service-tag">Optimallashtirish</span>
           </div>
         </div>
 
@@ -508,9 +531,9 @@
 
       <div class="section-header">
         <div class="section-label reveal">Texnologiyalar</div>
-        <h2 class="section-title reveal">Bizning stack</h2>
+        <h2 class="section-title reveal">Zamonaviy texnologiyalar to'plami</h2>
         <p class="section-subtitle reveal">
-          Sanoatdagi eng yaxshi texnologiyalar bilan zamonaviy, kuchli va
+          Sanoatdagi eng ilg'or texnologiyalar bilan zamonaviy, kuchli va
           miqyosli yechimlar yaratamiz.
         </p>
       </div>
@@ -522,7 +545,7 @@
           <h3 style="font-size:1.6rem;font-weight:700;margin-bottom:12px;">Jamoamiz ko'nikmalari</h3>
           <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:32px;">
             Turli texnologiyalar bo'yicha chuqur ixtisoslashuv. Har bir loyiha uchun
-            optimal texnologiya to'plamini tanlaymiz.
+            optimal texnologiyalar to'plamini tanlaymiz.
           </p>
           <div class="skill-bars">
             <div class="skill-bar-item">
@@ -573,54 +596,144 @@
           </div>
         </div>
 
-        <!-- Tech badges -->
+        <!-- Tech badges with real SVG logos -->
         <div class="reveal-right">
           <div class="tech-grid">
+
+            <!-- Swift -->
             <div class="glass-card tech-badge">
-              <div class="tech-badge-icon">🍎</div>
+              <div class="tech-badge-icon">
+                <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                  <linearGradient id="swift-a" x1="64" x2="64" y1="128" y2="0" gradientUnits="userSpaceOnUse">
+                    <stop offset="0" stop-color="#f88a36"/>
+                    <stop offset="1" stop-color="#fc3d39"/>
+                  </linearGradient>
+                  <rect width="128" height="128" fill="url(#swift-a)" rx="23.5"/>
+                  <path d="M106.8 78.9c.4-1.1.6-2.2.7-3.4.4-5.4-2.3-11.4-7.6-16.1-.8-.7-1.7-1.4-2.6-2 2.9-9.1 1.5-17.7-1.4-23.4C93.5 29.4 88.2 25 82.4 25c-3.5 0-6.5 1.5-8.5 4.3-1.8 2.4-2.4 5.5-1.7 8.5.4 1.7 1 3.3 1.8 4.8L73.7 43c-.1-.1-.1-.2-.2-.3C68.7 37 62.2 33 56.3 31c5.1 5.7 9.1 12.5 11.5 19.8-6.1-5.6-13.2-9.5-19.7-11.2 1.1 1.5 2.2 3.1 3.2 4.7 4.8 7.7 7.5 16.7 7.5 26.3 0 3.8-.4 7.5-1.2 11-4.5-4.3-8.2-9.5-10.8-15.4-2 6.1-2.4 12.8-1 19.1 1.3 5.8 4.1 11.1 8 15.3-4.3-1.4-8.3-3.6-11.7-6.6-3.9-3.5-6.8-7.9-8.5-12.8-2.5 6.8-2.5 14.3.1 21 2.5 6.4 7.2 11.7 13.2 15.1 6.5 3.7 14.1 5.2 21.6 4.2 7.5-1 14.5-4.3 20-9.5 5.5-5.1 9.2-11.8 10.4-19.2.5-3 .6-6.1.2-9.1-.4-2.7-1.2-5.4-2.3-7.8.4-.5.7-.9 1-1.4z" fill="#fff"/>
+                </svg>
+              </div>
               <div class="tech-badge-name">Swift</div>
               <div class="tech-badge-type">iOS</div>
             </div>
+
+            <!-- Kotlin -->
             <div class="glass-card tech-badge">
-              <div class="tech-badge-icon">🤖</div>
+              <div class="tech-badge-icon">
+                <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                  <linearGradient id="kotlin-a" x1="500.003" x2="-.097" y1="579.106" y2="1079.206" gradientTransform="translate(-.36 -504.353) scale(.5)" gradientUnits="userSpaceOnUse">
+                    <stop offset=".003" stop-color="#E44857"/>
+                    <stop offset=".469" stop-color="#C711E1"/>
+                    <stop offset="1" stop-color="#7F52FF"/>
+                  </linearGradient>
+                  <path fill="url(#kotlin-a)" d="M112 0H16C7.2 0 0 7.2 0 16v96c0 8.8 7.2 16 16 16h96c8.8 0 16-7.2 16-16V16c0-8.8-7.2-16-16-16z"/>
+                  <path fill="#fff" d="M16 112L64 64 16 16zm0 0"/>
+                  <path fill="#fff" d="M112 112H64l48-48zm0 0"/>
+                  <path fill="#fff" d="M112 16H64L16 64l48 48h48V16zm0 0"/>
+                </svg>
+              </div>
               <div class="tech-badge-name">Kotlin</div>
               <div class="tech-badge-type">Android</div>
             </div>
+
+            <!-- Java -->
             <div class="glass-card tech-badge">
-              <div class="tech-badge-icon">☕</div>
+              <div class="tech-badge-icon">
+                <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="#0074BD" d="M47.617 98.12s-4.767 2.774 3.397 3.71c9.892 1.13 14.947.968 25.845-1.092 0 0 2.871 1.795 6.873 3.351-24.439 10.47-55.308-.607-36.115-5.969zm-2.988-13.665s-5.348 3.959 2.823 4.805c10.567 1.091 18.91 1.18 33.354-1.6 0 0 1.993 2.025 5.132 3.131-29.542 8.64-62.446.68-41.309-6.336z"/>
+                  <path fill="#EA2D2E" d="M69.802 61.271c6.025 6.935-1.58 13.17-1.58 13.17s15.289-7.891 8.269-17.777c-6.559-9.215-11.587-13.792 15.635-29.58 0 0-42.731 10.67-22.324 34.187z"/>
+                  <path fill="#0074BD" d="M102.123 108.229s3.529 2.91-3.888 5.159c-14.102 4.272-58.706 5.56-71.094.171-4.451-1.938 3.899-4.625 6.526-5.192 2.739-.593 4.303-.485 4.303-.485-4.953-3.487-32.013 6.85-13.743 9.815 49.821 8.076 90.817-3.637 77.896-9.468zM49.912 70.294s-22.686 5.389-8.033 7.348c6.188.828 18.518.638 30.011-.326 9.39-.789 18.813-2.474 18.813-2.474s-3.308 1.419-5.704 3.053c-23.042 6.061-67.544 3.238-54.731-2.958 10.832-5.239 19.644-4.643 19.644-4.643zm40.697 22.747c23.421-12.167 12.591-23.86 5.032-22.285-1.848.385-2.677.72-2.677.72s.688-1.079 2-1.543c14.953-5.255 26.451 15.503-4.823 23.725 0 0 .366-.335.468-.617z"/>
+                  <path fill="#EA2D2E" d="M76.491 1.587S89.459 14.563 64.188 34.512c-20.266 16.006-4.621 25.13-.007 35.559-11.831-10.673-20.509-20.07-14.688-28.815C58.041 28.42 81.722 22.195 76.491 1.587z"/>
+                  <path fill="#0074BD" d="M52.214 126.021c22.476 1.437 57-.8 57.817-11.436 0 0-1.571 4.032-18.577 7.231-19.186 3.612-42.854 3.191-56.887.874 0 0 2.875 2.381 17.647 3.331z"/>
+                </svg>
+              </div>
               <div class="tech-badge-name">Java</div>
               <div class="tech-badge-type">Backend</div>
             </div>
+
+            <!-- React -->
             <div class="glass-card tech-badge">
-              <div class="tech-badge-icon">⚛️</div>
+              <div class="tech-badge-icon">
+                <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                  <g fill="#61DAFB">
+                    <circle cx="64" cy="64" r="11.4"/>
+                    <path d="M107.3 45.2c-2.2-.8-4.5-1.6-6.9-2.3.6-2.4 1.1-4.8 1.5-7.1 2.1-13.2-.2-22.5-6.6-26.1-1.9-1.1-4-1.6-6.4-1.6-7 0-15.9 5.2-24.9 13.9-9-8.7-17.9-13.9-24.9-13.9-2.4 0-4.5.5-6.4 1.6-6.4 3.7-8.7 13-6.6 26.1.4 2.3.9 4.7 1.5 7.1-2.4.7-4.7 1.4-6.9 2.3C8.2 50 1.4 56.6 1.4 64s6.8 14 19.3 18.8c2.2.8 4.5 1.6 6.9 2.3-.6 2.4-1.1 4.8-1.5 7.1-2.1 13.2.2 22.5 6.6 26.1 1.9 1.1 4 1.6 6.4 1.6 7.1 0 16-5.2 24.9-13.9 9 8.7 17.9 13.9 24.9 13.9 2.4 0 4.5-.5 6.4-1.6 6.4-3.7 8.7-13 6.6-26.1-.4-2.3-.9-4.7-1.5-7.1 2.4-.7 4.7-1.4 6.9-2.3 12.5-4.8 19.3-11.4 19.3-18.8s-6.8-14-19.3-18.8zM92.5 14.7c4.1 2.4 5.5 9.8 3.8 20.3-.3 2.1-.8 4.3-1.4 6.6-5.2-1.2-10.7-2-16.5-2.5-3.4-4.8-6.9-9.1-10.4-13 7.4-7.3 14.9-12.3 21-12.3 1.3 0 2.5.3 3.5.9zM81.3 74c-1.8 3.2-3.9 6.4-6.1 9.6-3.7.3-7.4.4-11.2.4-3.9 0-7.6-.1-11.2-.4-2.2-3.2-4.2-6.4-6-9.6-1.9-3.3-3.7-6.7-5.3-10 1.6-3.3 3.4-6.7 5.3-10 1.8-3.2 3.9-6.4 6.1-9.6 3.7-.3 7.4-.4 11.2-.4 3.9 0 7.6.1 11.2.4 2.2 3.2 4.2 6.4 6 9.6 1.9 3.3 3.7 6.7 5.3 10-1.7 3.3-3.4 6.6-5.3 10zm8.3-3.3c1.5 3.5 2.7 6.9 3.8 10.3-3.4.8-7 1.4-10.8 1.9 1.2-1.9 2.5-3.9 3.6-6 1.2-2.1 2.3-4.2 3.4-6.2zM64 97.8c-2.4-2.6-4.7-5.4-6.9-8.3 2.3.1 4.6.2 6.9.2 2.3 0 4.6-.1 6.9-.2-2.2 2.9-4.5 5.7-6.9 8.3zm-18.6-15c-3.8-.5-7.4-1.1-10.8-1.9 1.1-3.3 2.3-6.8 3.8-10.3 1.1 2 2.2 4.1 3.4 6.1 1.2 2.2 2.4 4.1 3.6 6.1zm-7-25.5c-1.5-3.5-2.7-6.9-3.8-10.3 3.4-.8 7-1.4 10.8-1.9-1.2 1.9-2.5 3.9-3.6 6-1.2 2.1-2.3 4.2-3.4 6.2zM64 30.2c2.4 2.6 4.7 5.4 6.9 8.3-2.3-.1-4.6-.2-6.9-.2-2.3 0-4.6.1-6.9.2 2.2-2.9 4.5-5.7 6.9-8.3zm22.2 21l-3.6-6c3.8.5 7.4 1.1 10.8 1.9-1.1 3.3-2.3 6.8-3.8 10.3-1.1-2-2.2-4.1-3.4-6.2zM31.7 35c-1.7-10.5-.3-17.9 3.8-20.3 1-.6 2.2-.9 3.5-.9 6 0 13.5 4.9 21 12.3-3.5 3.8-7 8.2-10.4 13-5.8.5-11.3 1.4-16.5 2.5-.6-2.3-1-4.5-1.4-6.6zM7 64c0-4.7 5.7-9.7 15.7-13.4 2-.8 4.2-1.5 6.4-2.1 1.6 5 3.6 10.3 6 15.6-2.4 5.3-4.5 10.5-6 15.5C15.3 75.6 7 69.6 7 64zm28.5 49.3c-4.1-2.4-5.5-9.8-3.8-20.3.3-2.1.8-4.3 1.4-6.6 5.2 1.2 10.7 2 16.5 2.5 3.4 4.8 6.9 9.1 10.4 13-7.4 7.3-14.9 12.3-21 12.3-1.3 0-2.5-.3-3.5-.9zM96.3 93c1.7 10.5.3 17.9-3.8 20.3-1 .6-2.2.9-3.5.9-6 0-13.5-4.9-21-12.3 3.5-3.8 7-8.2 10.4-13 5.8-.5 11.3-1.4 16.5-2.5.6 2.3 1 4.5 1.4 6.6zm9.5-14.5c-2 .8-4.2 1.5-6.4 2.1-1.6-5-3.6-10.3-6-15.6 2.4-5.3 4.5-10.5 6-15.5 13.8 4 22.1 10 22.1 15.6-.1 4.7-5.8 9.7-15.7 13.4z"/>
+                  </g>
+                </svg>
+              </div>
               <div class="tech-badge-name">React</div>
               <div class="tech-badge-type">Frontend</div>
             </div>
+
+            <!-- Next.js -->
             <div class="glass-card tech-badge">
-              <div class="tech-badge-icon">▲</div>
+              <div class="tech-badge-icon">
+                <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M64 0C28.7 0 0 28.7 0 64s28.7 64 64 64c11.2 0 21.7-2.9 30.8-7.9L48.4 55.3v36.6H36.3V40.4h13.5l50.8 75.2C116.6 105.4 128 86.1 128 64c0-35.3-28.7-64-64-64z" fill="currentColor"/>
+                </svg>
+              </div>
               <div class="tech-badge-name">Next.js</div>
               <div class="tech-badge-type">Full-stack</div>
             </div>
+
+            <!-- Flutter -->
             <div class="glass-card tech-badge">
-              <div class="tech-badge-icon">🐦</div>
+              <div class="tech-badge-icon">
+                <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                  <g fill="none">
+                    <path d="M12.3 64.2L76.3 0h39.4L32.1 83.6z" fill="#54C5F8"/>
+                    <path d="M76.3 128h39.4L81.6 93.9l34.1-34.8H76.3L42.2 93.5z" fill="#54C5F8"/>
+                    <path d="M81.6 93.9l-20-20-19.4 19.6 19.4 19.7z" fill="#01579B"/>
+                    <path d="M61.6 73.9l20 20 13.8-14.2-20.2-19.8z" fill="url(#flutter-b)"/>
+                    <linearGradient id="flutter-b" x1="73.4" x2="86.5" y1="79.2" y2="79.2" gradientUnits="userSpaceOnUse">
+                      <stop offset="0" stop-color="#01579B" stop-opacity=".4"/>
+                      <stop offset="1" stop-color="#01579B" stop-opacity="0"/>
+                    </linearGradient>
+                  </g>
+                </svg>
+              </div>
               <div class="tech-badge-name">Flutter</div>
               <div class="tech-badge-type">Cross-platform</div>
             </div>
+
+            <!-- Oracle DB -->
             <div class="glass-card tech-badge">
-              <div class="tech-badge-icon">🗄️</div>
+              <div class="tech-badge-icon">
+                <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M64 10C35.2 10 12 28.2 12 50.4c0 22.3 23.2 40.4 52 40.4s52-18.1 52-40.4C116 28.2 92.8 10 64 10zm0 70.8C40 80.8 21.6 67 21.6 50.4S40 20 64 20s42.4 13.8 42.4 30.4S88 80.8 64 80.8z" fill="#F80000"/>
+                  <ellipse cx="64" cy="87" rx="52" ry="12" fill="#F80000" opacity=".15"/>
+                  <text x="64" y="57" text-anchor="middle" font-family="Arial" font-size="22" font-weight="bold" fill="#F80000">DB</text>
+                </svg>
+              </div>
               <div class="tech-badge-name">Oracle DB</div>
-              <div class="tech-badge-type">Database</div>
+              <div class="tech-badge-type">Ma'lumotlar bazasi</div>
             </div>
+
+            <!-- PostgreSQL -->
             <div class="glass-card tech-badge">
-              <div class="tech-badge-icon">🐘</div>
+              <div class="tech-badge-icon">
+                <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M93.809 92.02c.49-4.01.682-4.723 3.695-4.195l.849.096c2.87.158 6.614-.46 8.816-1.481 4.73-2.215 7.532-5.913 2.876-4.943-10.686 2.215-11.459-1.382-11.459-1.382 11.307-16.79 16.034-38.1 11.941-43.327-11.086-14.15-30.29-7.455-30.578-7.297l-.103.019c-2.109-.437-4.469-.7-7.116-.744-4.82-.081-8.476 1.267-11.235 3.383-.01 0-.014-.005-.024-.005 0 0-14.374-5.932-27.342 2.246C26.2 41.218 33.048 75.61 33.048 75.61s-5.059 5.437-5.486 10.727c-.426 5.29.5 9.292 1.896 12.064h85.351z" fill="#336791"/>
+                </svg>
+              </div>
               <div class="tech-badge-name">PostgreSQL</div>
-              <div class="tech-badge-type">Database</div>
+              <div class="tech-badge-type">Ma'lumotlar bazasi</div>
             </div>
+
+            <!-- Figma -->
             <div class="glass-card tech-badge">
-              <div class="tech-badge-icon">🔷</div>
+              <div class="tech-badge-icon">
+                <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M45.5 129c11.9 0 21.5-9.6 21.5-21.5V86H45.5C33.6 86 24 95.6 24 107.5S33.6 129 45.5 129z" fill="#0ACF83"/>
+                  <path d="M24 64.5C24 52.6 33.6 43 45.5 43H67v43H45.5C33.6 86 24 76.4 24 64.5z" fill="#A259FF"/>
+                  <path d="M24 21.5C24 9.6 33.6 0 45.5 0H67v43H45.5C33.6 43 24 33.4 24 21.5z" fill="#F24E1E"/>
+                  <path d="M67 0h21.5C100.4 0 110 9.6 110 21.5S100.4 43 88.5 43H67V0z" fill="#FF7262"/>
+                  <path d="M110 64.5c0 11.9-9.6 21.5-21.5 21.5S67 76.4 67 64.5 76.6 43 88.5 43 110 52.6 110 64.5z" fill="#1ABCFE"/>
+                </svg>
+              </div>
               <div class="tech-badge-name">Figma</div>
-              <div class="tech-badge-type">Design</div>
+              <div class="tech-badge-type">Dizayn</div>
             </div>
+
           </div>
         </div>
 
@@ -636,68 +749,116 @@
 
       <div class="section-header">
         <div class="section-label reveal">Portfolio</div>
-        <h2 class="section-title reveal">Bizning ishlar</h2>
+        <h2 class="section-title reveal">Muvaffaqiyatli loyihalarimiz</h2>
         <p class="section-subtitle reveal">
-          Turli sohalardagi kompaniyalar uchun yaratgan raqamli yechimlarimiz.
+          Turli sohalardagi kompaniyalar uchun yaratilgan raqamli yechimlarimiz.
         </p>
       </div>
 
       <!-- Filter -->
       <div class="portfolio-filter reveal">
         <button class="filter-btn active" data-filter="all" id="filter-all">Barchasi</button>
-        <button class="filter-btn" data-filter="mobile" id="filter-mobile">📱 Mobile</button>
-        <button class="filter-btn" data-filter="web" id="filter-web">🌐 Web</button>
-        <button class="filter-btn" data-filter="design" id="filter-design">🎨 Dizayn</button>
+        <button class="filter-btn" data-filter="mobile" id="filter-mobile"><i class="fas fa-mobile-screen"></i> Mobil</button>
+        <button class="filter-btn" data-filter="web" id="filter-web"><i class="fas fa-globe"></i> Veb</button>
+        <button class="filter-btn" data-filter="design" id="filter-design"><i class="fas fa-pen-nib"></i> Dizayn</button>
       </div>
 
       <!-- Portfolio Grid -->
       <div class="portfolio-grid">
 
         <div class="portfolio-grid-item" data-category="mobile">
-          <div class="portfolio-card-placeholder">
-            <span class="portfolio-type-badge badge-mobile">Mobile</span>
-            <div class="portfolio-card-icon">📱</div>
-            <div class="portfolio-card-label">E-Commerce iOS App</div>
+          <div class="portfolio-card-placeholder portfolio-card-finpay">
+            <span class="portfolio-type-badge badge-mobile">Mobil</span>
+            <div class="portfolio-card-content">
+              <div class="portfolio-card-icon-wrap">
+                <i class="fas fa-wallet"></i>
+              </div>
+              <div class="portfolio-card-label">FinPay — To'lov Ilovasi</div>
+              <div class="portfolio-card-desc">iOS va Android uchun xavfsiz bank to'lovlari ilovasi. Biometrik autentifikatsiya, real vaqtda tranzaktsiyalar.</div>
+              <div class="portfolio-card-tags">
+                <span>Swift</span><span>Kotlin</span><span>Java</span>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="portfolio-grid-item" data-category="web">
-          <div class="portfolio-card-placeholder">
-            <span class="portfolio-type-badge badge-web">Web</span>
-            <div class="portfolio-card-icon">🌐</div>
-            <div class="portfolio-card-label">Corporate Platform</div>
+          <div class="portfolio-card-placeholder portfolio-card-corp">
+            <span class="portfolio-type-badge badge-web">Veb</span>
+            <div class="portfolio-card-content">
+              <div class="portfolio-card-icon-wrap">
+                <i class="fas fa-building-columns"></i>
+              </div>
+              <div class="portfolio-card-label">CorporateHub — Korporativ Portal</div>
+              <div class="portfolio-card-desc">Yirik korporatsiyalar uchun ichki boshqaruv platformasi. HR, hujjat aylanishi va hisobot modullari.</div>
+              <div class="portfolio-card-tags">
+                <span>React</span><span>Node.js</span><span>Oracle</span>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="portfolio-grid-item" data-category="design">
-          <div class="portfolio-card-placeholder">
+          <div class="portfolio-card-placeholder portfolio-card-brand">
             <span class="portfolio-type-badge badge-design">Dizayn</span>
-            <div class="portfolio-card-icon">🎨</div>
-            <div class="portfolio-card-label">Brand Identity</div>
+            <div class="portfolio-card-content">
+              <div class="portfolio-card-icon-wrap">
+                <i class="fas fa-palette"></i>
+              </div>
+              <div class="portfolio-card-label">BrandCraft — Brend Identifikatsiyasi</div>
+              <div class="portfolio-card-desc">To'liq brend paket: logotip, korporativ rangi, tipografiya, marketing materiallari va brand book.</div>
+              <div class="portfolio-card-tags">
+                <span>Figma</span><span>Illustrator</span><span>Brend</span>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="portfolio-grid-item" data-category="mobile">
-          <div class="portfolio-card-placeholder">
-            <span class="portfolio-type-badge badge-mobile">Mobile</span>
-            <div class="portfolio-card-icon">🚀</div>
-            <div class="portfolio-card-label">Delivery Android App</div>
+          <div class="portfolio-card-placeholder portfolio-card-delivery">
+            <span class="portfolio-type-badge badge-mobile">Mobil</span>
+            <div class="portfolio-card-content">
+              <div class="portfolio-card-icon-wrap">
+                <i class="fas fa-truck-fast"></i>
+              </div>
+              <div class="portfolio-card-label">ExpressLogistics — Yetkazib Berish</div>
+              <div class="portfolio-card-desc">Real vaqtda kuzatuv, yo'riqnoma va boshqaruv paneli bo'lgan yetkazib berish xizmati ilovasi.</div>
+              <div class="portfolio-card-tags">
+                <span>Kotlin</span><span>Flutter</span><span>Google Maps</span>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="portfolio-grid-item" data-category="web">
-          <div class="portfolio-card-placeholder">
-            <span class="portfolio-type-badge badge-web">Web</span>
-            <div class="portfolio-card-icon">💼</div>
-            <div class="portfolio-card-label">CRM Dashboard</div>
+          <div class="portfolio-card-placeholder portfolio-card-crm">
+            <span class="portfolio-type-badge badge-web">Veb</span>
+            <div class="portfolio-card-content">
+              <div class="portfolio-card-icon-wrap">
+                <i class="fas fa-chart-pie"></i>
+              </div>
+              <div class="portfolio-card-label">CRM Analytics — Boshqaruv Tizimi</div>
+              <div class="portfolio-card-desc">Mijozlar munosabatlarini boshqarish tizimi. Real vaqt tahlili, savdo hunari va hisobotlar.</div>
+              <div class="portfolio-card-tags">
+                <span>Next.js</span><span>PostgreSQL</span><span>Redis</span>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="portfolio-grid-item" data-category="mobile">
-          <div class="portfolio-card-placeholder">
-            <span class="portfolio-type-badge badge-mobile">Mobile</span>
-            <div class="portfolio-card-icon">💳</div>
-            <div class="portfolio-card-label">FinTech App</div>
+          <div class="portfolio-card-placeholder portfolio-card-edu">
+            <span class="portfolio-type-badge badge-mobile">Mobil</span>
+            <div class="portfolio-card-content">
+              <div class="portfolio-card-icon-wrap">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <div class="portfolio-card-label">EduPlatform — Ta'lim Ilovasi</div>
+              <div class="portfolio-card-desc">Onlayn ta'lim platformasi. Video darslar, viktorinalar, sertifikatlar va o'quvchi tahlili.</div>
+              <div class="portfolio-card-tags">
+                <span>Swift</span><span>React Native</span><span>AWS</span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -720,10 +881,10 @@
 
       <div class="section-header">
         <div class="section-label reveal">Jamoamiz</div>
-        <h2 class="section-title reveal">Orqamizda kimlar?</h2>
+        <h2 class="section-title reveal">Bizning yetakchi jamoamiz</h2>
         <p class="section-subtitle reveal">
           Har biri o'z sohasida tajribali va ishtiyoqli mutaxassislardan iborat
-          kichik lekin samarali jamoa.
+          kichik, lekin samarali jamoa.
         </p>
       </div>
 
@@ -737,9 +898,9 @@
             </div>
             <div class="team-avatar-placeholder">A</div>
           </div>
-          <div class="team-role-badge">Co-founder</div>
+          <div class="team-role-badge">Hammuassis</div>
           <h4 class="team-name">Asilbek Yusupov</h4>
-          <p class="team-position">Lead iOS Developer</p>
+          <p class="team-position">Bosh iOS Dasturchi</p>
           <p class="team-bio">Swift va Objective-C bo'yicha 6 yillik tajriba. App Store'da 10+ muvaffaqiyatli loyiha. WWDC ishtirokchisi.</p>
           <div class="team-socials">
             <a href="#" class="team-social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
@@ -756,9 +917,9 @@
             </div>
             <div class="team-avatar-placeholder" style="background:linear-gradient(135deg,#8b5cf6,#06b6d4)">B</div>
           </div>
-          <div class="team-role-badge">Co-founder</div>
+          <div class="team-role-badge">Hammuassis</div>
           <h4 class="team-name">Bobur Rahimov</h4>
-          <p class="team-position">Backend Architect</p>
+          <p class="team-position">Backend Arxitekti</p>
           <p class="team-bio">Java va Spring Boot ustasi. Enterprise tizimlar va microservices arxitekturasi bo'yicha mutaxassis. Oracle DBA.</p>
           <div class="team-socials">
             <a href="#" class="team-social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
@@ -777,8 +938,8 @@
           </div>
           <div class="team-role-badge">Senior</div>
           <h4 class="team-name">Sarvinoz Mirzayeva</h4>
-          <p class="team-position">UI/UX & Frontend Lead</p>
-          <p class="team-bio">Figma va React'da chiroyli va samarali interfeyslar yaratadi. 4 yil davomida 20+ loyiha dizaynini yaratgan.</p>
+          <p class="team-position">UI/UX va Frontend Rahbari</p>
+          <p class="team-bio">Figma va React'da chiroyli va samarali interfeyslar yaratadi. 4 yil davomida 20+ loyiha dizaynini amalga oshirgan.</p>
           <div class="team-socials">
             <a href="#" class="team-social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             <a href="#" class="team-social-link" title="Dribbble"><i class="fab fa-dribbble"></i></a>
@@ -799,7 +960,7 @@
 
       <div class="section-header">
         <div class="section-label reveal">Mijozlar fikri</div>
-        <h2 class="section-title reveal">Ular nima deydi?</h2>
+        <h2 class="section-title reveal">Mijozlarimizning fikrlari va ishonchi</h2>
       </div>
 
       <div class="testimonials-grid">
@@ -810,7 +971,7 @@
             <i class="fas fa-star"></i><i class="fas fa-star"></i>
           </div>
           <p class="testimonial-text">
-            Olab Tech jamoasi bilan ishlash juda qulay bo'ldi. Ular loyihani o'z vaqtida topshirdi va natijaidan juda mamnunmiz. Professional yondashuv va sifatli kod.
+            Olab Tech jamoasi bilan ishlash juda qulay bo'ldi. Ular loyihani o'z vaqtida topshirdi va natijasidan juda mamnunmiz. Professional yondashuv va sifatli kod.
           </p>
           <div class="testimonial-author">
             <div class="testimonial-avatar">R</div>
@@ -827,13 +988,13 @@
             <i class="fas fa-star"></i><i class="fas fa-star"></i>
           </div>
           <p class="testimonial-text">
-            Mobile ilovamizni Olab Tech bilan ishlab chiqdik. Dizayni ajoyib, ishlashi tezkor va xatosiz. Foydalanuvchilarimiz juda mamnun. Tavsiya qilaman!
+            Mobil ilovamizni Olab Tech bilan ishlab chiqdik. Dizayni ajoyib, ishlashi tezkor va xatosiz. Foydalanuvchilarimiz juda mamnun. Tavsiya qilaman!
           </p>
           <div class="testimonial-author">
             <div class="testimonial-avatar" style="background:linear-gradient(135deg,#8b5cf6,#06b6d4)">M</div>
             <div>
               <div class="testimonial-name">Malika Toshmatova</div>
-              <div class="testimonial-company">Founder, EduApp</div>
+              <div class="testimonial-company">Asoschisi, EduApp</div>
             </div>
           </div>
         </div>
@@ -844,7 +1005,7 @@
             <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
           </div>
           <p class="testimonial-text">
-            Backend sistemamizni qayta qurdik Olab Tech bilan. Endi tizim 10x tezroq ishlaydi. Texnik bilim va muloqot ko'nikmalari yuqori darajada.
+            Backend tizimimizni Olab Tech bilan qayta qurdik. Endi tizim 10 barobar tezroq ishlaydi. Texnik bilim va muloqot ko'nikmalari yuqori darajada.
           </p>
           <div class="testimonial-author">
             <div class="testimonial-avatar" style="background:linear-gradient(135deg,#06b6d4,#10b981)">J</div>
@@ -866,7 +1027,7 @@
   <section id="newsletter">
     <div class="container">
       <div class="newsletter-inner reveal">
-        <h3>Yangiliklar bilan xabardor bo'ling</h3>
+        <h3>Yangiliklardan doimo xabardor bo'ling</h3>
         <p>IT sohasidagi so'nggi tendensiyalar va Olab Tech yangiliklari haqida birinchi bo'lib biling.</p>
         <form class="newsletter-form" id="newsletter-form">
           <input type="email" placeholder="email@example.com" id="newsletter-email" required>
@@ -899,14 +1060,14 @@
           <p>Loyihangiz haqida suhbatlashishga doimo tayyormiz. Ish soatlarida va undan tashqarida ham javob beramiz.</p>
           <div class="contact-info-items">
             <div class="contact-info-item">
-              <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="contact-info-icon"><i class="fas fa-location-dot"></i></div>
               <div class="contact-info-text">
                 <label>Manzil</label>
                 <span>Toshkent shahar, O'zbekiston</span>
               </div>
             </div>
             <div class="contact-info-item">
-              <div class="contact-info-icon"><i class="fas fa-phone-alt"></i></div>
+              <div class="contact-info-icon"><i class="fas fa-phone"></i></div>
               <div class="contact-info-text">
                 <label>Telefon</label>
                 <a href="tel:+998900240240">+998 90 024 02 40</a>
@@ -915,7 +1076,7 @@
             <div class="contact-info-item">
               <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
               <div class="contact-info-text">
-                <label>Email</label>
+                <label>Elektron pochta</label>
                 <a href="mailto:olab.innovation@gmail.com">olab.innovation@gmail.com</a>
               </div>
             </div>
@@ -930,7 +1091,7 @@
               <div class="contact-info-icon"><i class="fas fa-clock"></i></div>
               <div class="contact-info-text">
                 <label>Ish soatlari</label>
-                <span>Du–Juma: 09:00 – 18:00</span>
+                <span>Dushanba – Juma: 09:00 – 18:00</span>
               </div>
             </div>
           </div>
@@ -945,21 +1106,25 @@
                 <input type="text" id="contact-name" placeholder="Alisher Karimov">
               </div>
               <div class="form-group">
-                <label for="contact-email">Email</label>
+                <label for="contact-email">Elektron pochta</label>
                 <input type="email" id="contact-email" placeholder="alisher@company.uz">
               </div>
+            </div>
+            <div class="form-group">
+              <label for="contact-phone">Telefon raqami</label>
+              <input type="tel" id="contact-phone" placeholder="+998 90 000 00 00">
             </div>
             <div class="form-group">
               <label for="contact-service">Xizmat turi</label>
               <select id="contact-service">
                 <option value="">Tanlang...</option>
-                <option value="mobile">📱 Mobile Ilova</option>
-                <option value="web">🌐 Web Platforma</option>
-                <option value="backend">🔧 Backend Tizim</option>
-                <option value="design">🎨 UI/UX Dizayn</option>
-                <option value="branding">💎 Brending</option>
-                <option value="support">🛡️ Texnik yordam</option>
-                <option value="other">💬 Boshqa</option>
+                <option value="mobile">Mobil Ilova</option>
+                <option value="web">Veb-Platforma</option>
+                <option value="backend">Backend Tizimi</option>
+                <option value="design">UI/UX Dizayn</option>
+                <option value="branding">Brending</option>
+                <option value="support">Texnik yordam</option>
+                <option value="other">Boshqa</option>
               </select>
             </div>
             <div class="form-group">
@@ -992,11 +1157,11 @@
               <span>Olab Tech</span>
             </div>
             <p class="footer-brand-desc">
-              O'zbekistondagi mobile va web ilovalar ishlab chiqish kompaniyasi.
+              O'zbekistondagi mobil va veb-ilovalar ishlab chiqish kompaniyasi.
               G'oyangizni raqamli haqiqatga aylantiramiz.
             </p>
             <div class="footer-social-links">
-              <a href="#" class="footer-social-link" title="Telegram" id="footer-telegram"><i class="fab fa-telegram"></i></a>
+              <a href="https://t.me/olabtech" class="footer-social-link" title="Telegram" id="footer-telegram" target="_blank" rel="noopener"><i class="fab fa-telegram"></i></a>
               <a href="#" class="footer-social-link" title="LinkedIn" id="footer-linkedin"><i class="fab fa-linkedin-in"></i></a>
               <a href="#" class="footer-social-link" title="GitHub" id="footer-github"><i class="fab fa-github"></i></a>
               <a href="#" class="footer-social-link" title="Instagram" id="footer-instagram"><i class="fab fa-instagram"></i></a>
@@ -1008,8 +1173,8 @@
           <div class="footer-col">
             <h5>Xizmatlar</h5>
             <ul>
-              <li><a href="#services">Mobile Ilovalar</a></li>
-              <li><a href="#services">Web Ilovalar</a></li>
+              <li><a href="#services">Mobil Ilovalar</a></li>
+              <li><a href="#services">Veb-Ilovalar</a></li>
               <li><a href="#services">Backend Tizimlar</a></li>
               <li><a href="#services">UI/UX Dizayn</a></li>
               <li><a href="#services">Brending</a></li>
