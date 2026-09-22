@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="uz" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <title>Olab Tech — Mobile & Web Development Company | Tashkent, Uzbekistan</title>
+  <meta name="description" content="Olab Tech — Toshkent shahridagi mobile va web ilovalar ishlab chiqish kompaniyasi. Swift, Kotlin, Java, React texnologiyalari bilan premium raqamli yechimlar.">
+  <meta name="keywords" content="mobile app development, web development, iOS, Android, Tashkent, Uzbekistan, Swift, Kotlin, Java">
+  <meta name="author" content="Olab Tech">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Olab Tech — Mobile & Web Development">
+  <meta property="og:description" content="Premium mobile & web development company from Tashkent, Uzbekistan.">
+  <meta property="og:url" content="https://olabtech.uz">
+  <meta property="og:image" content="assets/images/logo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- ======================================================
+       PRELOADER
+  ====================================================== -->
+  <div id="preloader">
+    <div class="preloader-logo">
+      <span class="logo-text">Olab Tech</span>
+      <div class="preloader-bar">
+        <div class="preloader-bar-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================
+       NAVBAR
+  ====================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <nav class="navbar-inner">
+
+        <!-- Brand -->
+        <a href="#hero" class="navbar-brand" id="navbar-brand">
+          <div class="brand-icon">O</div>
+          <span>Olab Tech</span>
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#hero" class="active">Bosh sahifa</a></li>
+          <li><a href="#about">Biz haqimizda</a></li>
+          <li><a href="#services">Xizmatlar</a></li>
+          <li><a href="#technologies">Texnologiyalar</a></li>
+          <li><a href="#portfolio">Loyihalar</a></li>
+          <li><a href="#team">Jamoa</a></li>
+          <li><a href="#contact">Aloqa</a></li>
+        </ul>
+
+        <!-- Right Controls -->
+        <div class="navbar-right">
+          <!-- Dark/Light Toggle -->
+          <label class="theme-toggle" id="theme-toggle-label" title="Mavzuni o'zgartirish">
+            <input type="checkbox" id="theme-toggle-input">
+            <div class="toggle-track">
+              <div class="toggle-thumb">🌙</div>
+            </div>
+          </label>
+
+          <a href="#contact" class="btn btn-primary btn-sm" id="nav-contact-btn">
+            <i class="fas fa-paper-plane"></i> Bog'lanish
+          </a>
+
+          <!-- Hamburger -->
+          <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="#hero">🏠 Bosh sahifa</a>
+    <a href="#about">💡 Biz haqimizda</a>
+    <a href="#services">⚙️ Xizmatlar</a>
+    <a href="#technologies">🔧 Texnologiyalar</a>
+    <a href="#portfolio">🎨 Loyihalar</a>
+    <a href="#team">👥 Jamoa</a>
+    <a href="#contact">📩 Aloqa</a>
+  </nav>
+
+  <!-- ======================================================
+       HERO SECTION
+  ====================================================== -->
+  <section id="hero">
+    <!-- Background Elements -->
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+    <div class="hero-blob hero-blob-3"></div>
+    <div class="hero-grid"></div>
+    <canvas id="particles-canvas"></canvas>
+
+    <div class="container">
+      <div class="grid-2">
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+
+          <div class="hero-badge">
+            <span class="hero-badge-dot"></span>
+            Toshkent, O'zbekiston · 2019 yildan
+          </div>
+
+          <h1 class="hero-title">
+            Biz yaratamiz<br>
+            <span class="gradient-text">Raqamli Kelajak</span>
+          </h1>
+
+          <div class="typing-container">
+            Mutaxassislarimiz: <span id="typed-text"></span><span class="typing-cursor"></span>
+          </div>
+
+          <p class="hero-desc">
+            Olab Tech — mobile ilovalar va web platformalar ishlab chiquvchi kompaniya.
+            Bizneslar uchun Swift, Kotlin, Java va zamonaviy web texnologiyalari orqali
+            yuqori sifatli raqamli yechimlar yaratamiz.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#portfolio" class="btn btn-primary btn-lg" id="hero-portfolio-btn">
+              <i class="fas fa-rocket"></i> Loyihalarimiz
+            </a>
+            <a href="#contact" class="btn btn-outline btn-lg" id="hero-contact-btn">
+              <i class="fas fa-comments"></i> Murojaat qilish
+            </a>
+          </div>
+
+          <!-- Stats -->
+          <div class="hero-stats">
+            <div class="hero-stat-item">
+              <div class="hero-stat-number">50+</div>
+              <div class="hero-stat-label">Loyihalar</div>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat-item">
+              <div class="hero-stat-number">30+</div>
+              <div class="hero-stat-label">Mijozlar</div>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat-item">
+              <div class="hero-stat-number">5+</div>
+              <div class="hero-stat-label">Yil tajriba</div>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat-item">
+              <div class="hero-stat-number">98%</div>
+              <div class="hero-stat-label">Muvaffaqiyat</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual -->
+        <div class="hero-visual">
+          <div class="hero-phone-mockup">
+
+            <!-- Floating badges -->
+            <div class="floating-badge badge-1">
+              <span class="floating-badge-icon">📱</span>
+              <div>
+                <div class="floating-badge-text">iOS & Android</div>
+                <div class="floating-badge-sub">Native development</div>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-2">
+              <span class="floating-badge-icon">⚡</span>
+              <div>
+                <div class="floating-badge-text">Fast delivery</div>
+                <div class="floating-badge-sub">On-time, every time</div>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-3">
+              <span class="floating-badge-icon">🔒</span>
+              <div>
+                <div class="floating-badge-text">Secure code</div>
+                <div class="floating-badge-sub">Enterprise grade</div>
+              </div>
+            </div>
+
+            <!-- Phone frame -->
+            <div class="phone-frame">
+              <div class="phone-notch"></div>
+              <div class="phone-screen">
+                <!-- App UI preview -->
+                <div class="phone-stats-card">
+                  <div class="phone-stats-icon"><i class="fas fa-chart-line"></i></div>
+                  <div class="phone-stats-info">
+                    <div class="phone-stats-value">+24.5%</div>
+                    <div class="phone-stats-sub">Foyda o'sishi</div>
+                  </div>
+                </div>
+                <div class="phone-app-row">
+                  <div class="phone-app-card">
+                    <div class="phone-app-icon">📊</div>
+                    <div class="phone-app-title">Analytics</div>
+                    <div class="phone-chart-bar"><div class="phone-chart-fill" style="width:75%"></div></div>
+                  </div>
+                  <div class="phone-app-card">
+                    <div class="phone-app-icon">💬</div>
+                    <div class="phone-app-title">Messages</div>
+                    <div class="phone-chart-bar"><div class="phone-chart-fill" style="width:60%"></div></div>
+                  </div>
+                </div>
+                <div class="phone-stats-card">
+                  <div class="phone-stats-icon" style="background:rgba(6,182,212,0.2);"><i class="fas fa-users" style="color:#06b6d4"></i></div>
+                  <div class="phone-stats-info">
+                    <div class="phone-stats-value">12,847</div>
+                    <div class="phone-stats-sub">Faol foydalanuvchi</div>
+                  </div>
+                </div>
+                <div class="phone-app-row">
+                  <div class="phone-app-card">
+                    <div class="phone-app-icon">🚀</div>
+                    <div class="phone-app-title">Projects</div>
+                    <div class="phone-chart-bar"><div class="phone-chart-fill" style="width:90%"></div></div>
+                  </div>
+                  <div class="phone-app-card">
+                    <div class="phone-app-icon">⭐</div>
+                    <div class="phone-app-title">Rating</div>
+                    <div class="phone-chart-bar"><div class="phone-chart-fill" style="width:98%"></div></div>
+                  </div>
+                </div>
+                <div class="phone-stats-card">
+                  <div class="phone-stats-icon" style="background:rgba(139,92,246,0.2);"><i class="fas fa-code" style="color:#8b5cf6"></i></div>
+                  <div class="phone-stats-info">
+                    <div class="phone-stats-value">100K+ satir</div>
+                    <div class="phone-stats-sub">Sifatli kod</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Pastga aylantiring</span>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       ABOUT SECTION
+  ====================================================== -->
+  <section id="about" class="section">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-label reveal">Biz haqimizda</div>
+        <h2 class="section-title reveal">Raqamli transformatsiya<br>hamkori</h2>
+        <p class="section-subtitle reveal">
+          Olab Tech — 2019 yildan buyon O'zbekistondagi bizneslar uchun zamonaviy
+          mobile ilovalar va web platformalar yaratib kelayotgan IT kompaniyasi.
+        </p>
+      </div>
+
+      <!-- Offer Cards -->
+      <div class="about-offer-grid">
+        <div class="glass-card offer-card reveal reveal-delay-1">
+          <div class="offer-icon-wrap">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <h4>Premium Dizayn & Interfeys</h4>
+          <p>Foydalanuvchi tajribasini birinchi o'ringa qo'ygan zamonaviy UI/UX dizayn. Har bir piksel maqsadga xizmat qiladi.</p>
+        </div>
+
+        <div class="glass-card offer-card reveal reveal-delay-2">
+          <div class="offer-icon-wrap">
+            <i class="fas fa-layer-group"></i>
+          </div>
+          <h4>Kuchli Brending</h4>
+          <p>Brendingiz raqamli va jismoniy muhitda bir xil kuchli ko'rinishda. Logo, identifikatsiya, marketing materiallar.</p>
+        </div>
+
+        <div class="glass-card offer-card reveal reveal-delay-3">
+          <div class="offer-icon-wrap">
+            <i class="fas fa-headset"></i>
+          </div>
+          <h4>Doimiy Qo'llab-Quvvatlash</h4>
+          <p>Loyiha tugagandan so'ng ham yon tarafingizda. Texnik yordam, yangilovlar va kengaytirishlar uchun 7/24 tayyor.</p>
+        </div>
+      </div>
+
+      <!-- About Text -->
+      <div class="about-text-section">
+        <div class="grid-2">
+          <div class="about-text-content reveal-left">
+            <h3>Nima uchun aynan <span style="background:var(--accent-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Olab Tech?</span></h3>
+            <p>
+              Biz shunchaki kod yozmaymiz — biznesingizning raqamli versiyasini quramiz.
+              Har bir loyihaga startup kabi jiddiylik va korporativ darajadagi mas'uliyat
+              bilan yondoshamiz.
+            </p>
+            <p>
+              Toshkent markazida joylashgan jamoamiz O'zbekiston, Rossiya va xalqaro
+              mijozlar bilan ishlash tajribasiga ega. Mobile ilovalardan tortib to
+              murakkab backend tizimlargacha — barchasi bir joyda.
+            </p>
+            <div class="about-highlights">
+              <div class="about-highlight-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Agile metodologiyasi — shaffof jarayon, haftalik hisobotlar</span>
+              </div>
+              <div class="about-highlight-item">
+                <i class="fas fa-check-circle"></i>
+                <span>NDA shartnomasi — sizning g'oyalaringiz himoyalangan</span>
+              </div>
+              <div class="about-highlight-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Moslashuvchan narxlar — har qanday byudjet uchun yechim</span>
+              </div>
+              <div class="about-highlight-item">
+                <i class="fas fa-check-circle"></i>
+                <span>O'z vaqtida yetkazib berish — SLA kafolati</span>
+              </div>
+            </div>
+          </div>
+          <div class="reveal-right">
+            <!-- Visual stats block -->
+            <div class="glass-card" style="padding:36px;">
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+                <div style="text-align:center;padding:20px;border-radius:12px;background:var(--accent-gradient-soft);border:1px solid rgba(99,102,241,0.2);">
+                  <div style="font-size:2.5rem;font-weight:900;background:var(--accent-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">50+</div>
+                  <div style="font-size:0.8rem;color:var(--text-muted);margin-top:4px;">Yakunlangan loyihalar</div>
+                </div>
+                <div style="text-align:center;padding:20px;border-radius:12px;background:var(--accent-gradient-soft);border:1px solid rgba(99,102,241,0.2);">
+                  <div style="font-size:2.5rem;font-weight:900;background:var(--accent-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">30+</div>
+                  <div style="font-size:0.8rem;color:var(--text-muted);margin-top:4px;">Mamnun mijozlar</div>
+                </div>
+                <div style="text-align:center;padding:20px;border-radius:12px;background:var(--accent-gradient-soft);border:1px solid rgba(99,102,241,0.2);">
+                  <div style="font-size:2.5rem;font-weight:900;background:var(--accent-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">5+</div>
+                  <div style="font-size:0.8rem;color:var(--text-muted);margin-top:4px;">Yillik tajriba</div>
+                </div>
+                <div style="text-align:center;padding:20px;border-radius:12px;background:var(--accent-gradient-soft);border:1px solid rgba(99,102,241,0.2);">
+                  <div style="font-size:2.5rem;font-weight:900;background:var(--accent-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">4.9★</div>
+                  <div style="font-size:0.8rem;color:var(--text-muted);margin-top:4px;">Mijoz reytingi</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================
+       STATS SECTION
+  ====================================================== -->
+  <section id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal reveal-delay-1">
+          <div class="stat-value" data-target="50" data-suffix="+">0+</div>
+          <div class="stat-label">Yakunlangan loyihalar</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-2">
+          <div class="stat-value" data-target="30" data-suffix="+">0+</div>
+          <div class="stat-label">Mamnun mijozlar</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-3">
+          <div class="stat-value" data-target="5" data-suffix="+">0+</div>
+          <div class="stat-label">Yillik tajriba</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-4">
+          <div class="stat-value" data-target="98" data-suffix="%">0%</div>
+          <div class="stat-label">Muvaffaqiyat darajasi</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       SERVICES SECTION
+  ====================================================== -->
+  <section id="services" class="section">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-label reveal">Xizmatlarimiz</div>
+        <h2 class="section-title reveal">Nima qilamiz?</h2>
+        <p class="section-subtitle reveal">
+          Raqamli mahsulotlarni g'oyadan ishlab chiqish va joylashtirishgacha
+          to'liq sikl bilan qo'llab-quvvatlaymiz.
+        </p>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="glass-card service-card reveal reveal-delay-1">
+          <div class="service-number">01</div>
+          <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h4>Mobile Ilovalar</h4>
+          <p>iOS va Android uchun native va cross-platform ilovalar. App Store va Google Play'da chiqarishgacha to'liq qo'llab-quvvatlash.</p>
+          <div class="service-tags">
+            <span class="service-tag">Swift</span>
+            <span class="service-tag">Kotlin</span>
+            <span class="service-tag">Flutter</span>
+          </div>
+        </div>
+
+        <div class="glass-card service-card reveal reveal-delay-2">
+          <div class="service-number">02</div>
+          <div class="service-icon"><i class="fas fa-globe"></i></div>
+          <h4>Web Ilovalar</h4>
+          <p>Zamonaviy, tez va responsiv web saytlar va web ilovalar. SPA, PWA, va enterprise darajadagi platformalar.</p>
+          <div class="service-tags">
+            <span class="service-tag">React</span>
+            <span class="service-tag">Next.js</span>
+            <span class="service-tag">Vue</span>
+          </div>
+        </div>
+
+        <div class="glass-card service-card reveal reveal-delay-3">
+          <div class="service-number">03</div>
+          <div class="service-icon"><i class="fas fa-server"></i></div>
+          <h4>Backend Tizimlar</h4>
+          <p>Kuchli va miqyosli backend arxitektura. REST API, microservices, real-time tizimlar va ma'lumotlar bazalari.</p>
+          <div class="service-tags">
+            <span class="service-tag">Java</span>
+            <span class="service-tag">Node.js</span>
+            <span class="service-tag">Oracle</span>
+          </div>
+        </div>
+
+        <div class="glass-card service-card reveal reveal-delay-1">
+          <div class="service-number">04</div>
+          <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+          <h4>UI/UX Dizayn</h4>
+          <p>Foydalanuvchi markazlashgan dizayn. Wireframe, prototip, user testing va to'liq dizayn tizimi yaratish.</p>
+          <div class="service-tags">
+            <span class="service-tag">Figma</span>
+            <span class="service-tag">Prototyping</span>
+            <span class="service-tag">Design System</span>
+          </div>
+        </div>
+
+        <div class="glass-card service-card reveal reveal-delay-2">
+          <div class="service-number">05</div>
+          <div class="service-icon"><i class="fas fa-bullseye"></i></div>
+          <h4>Brending & Marketing</h4>
+          <p>Brendingizni raqamli dunyoda kuchaytirish. Logo, korporativ identifikatsiya, digital marketing strategiyasi.</p>
+          <div class="service-tags">
+            <span class="service-tag">Logo Design</span>
+            <span class="service-tag">Brand Identity</span>
+            <span class="service-tag">SEO</span>
+          </div>
+        </div>
+
+        <div class="glass-card service-card reveal reveal-delay-3">
+          <div class="service-number">06</div>
+          <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+          <h4>Texnik Qo'llab-quvvatlash</h4>
+          <p>Loyiha ishga tushgandan so'ng ham 7/24 monitoring, yangilovlar, xavfsizlik tekshiruvlari va optimizatsiya.</p>
+          <div class="service-tags">
+            <span class="service-tag">Monitoring</span>
+            <span class="service-tag">Security</span>
+            <span class="service-tag">Optimization</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       TECHNOLOGIES SECTION
+  ====================================================== -->
+  <section id="technologies" class="section">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-label reveal">Texnologiyalar</div>
+        <h2 class="section-title reveal">Bizning stack</h2>
+        <p class="section-subtitle reveal">
+          Sanoatdagi eng yaxshi texnologiyalar bilan zamonaviy, kuchli va
+          miqyosli yechimlar yaratamiz.
+        </p>
+      </div>
+
+      <div class="tech-content">
+
+        <!-- Skill bars -->
+        <div class="reveal-left">
+          <h3 style="font-size:1.6rem;font-weight:700;margin-bottom:12px;">Jamoamiz ko'nikmalari</h3>
+          <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:32px;">
+            Turli texnologiyalar bo'yicha chuqur ixtisoslashuv. Har bir loyiha uchun
+            optimal texnologiya to'plamini tanlaymiz.
+          </p>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-meta">
+                <span class="skill-bar-name"><i class="fab fa-apple"></i> Swift (iOS)</span>
+                <span class="skill-bar-percent">95%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="95"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-meta">
+                <span class="skill-bar-name"><i class="fab fa-android"></i> Kotlin (Android)</span>
+                <span class="skill-bar-percent">92%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="92"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-meta">
+                <span class="skill-bar-name"><i class="fab fa-java"></i> Java (Backend)</span>
+                <span class="skill-bar-percent">95%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="95"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-meta">
+                <span class="skill-bar-name"><i class="fab fa-react"></i> React / Next.js</span>
+                <span class="skill-bar-percent">88%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="88"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-meta">
+                <span class="skill-bar-name"><i class="fas fa-database"></i> Oracle / PostgreSQL</span>
+                <span class="skill-bar-percent">90%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="90"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech badges -->
+        <div class="reveal-right">
+          <div class="tech-grid">
+            <div class="glass-card tech-badge">
+              <div class="tech-badge-icon">🍎</div>
+              <div class="tech-badge-name">Swift</div>
+              <div class="tech-badge-type">iOS</div>
+            </div>
+            <div class="glass-card tech-badge">
+              <div class="tech-badge-icon">🤖</div>
+              <div class="tech-badge-name">Kotlin</div>
+              <div class="tech-badge-type">Android</div>
+            </div>
+            <div class="glass-card tech-badge">
+              <div class="tech-badge-icon">☕</div>
+              <div class="tech-badge-name">Java</div>
+              <div class="tech-badge-type">Backend</div>
+            </div>
+            <div class="glass-card tech-badge">
+              <div class="tech-badge-icon">⚛️</div>
+              <div class="tech-badge-name">React</div>
+              <div class="tech-badge-type">Frontend</div>
+            </div>
+            <div class="glass-card tech-badge">
+              <div class="tech-badge-icon">▲</div>
+              <div class="tech-badge-name">Next.js</div>
+              <div class="tech-badge-type">Full-stack</div>
+            </div>
+            <div class="glass-card tech-badge">
+              <div class="tech-badge-icon">🐦</div>
+              <div class="tech-badge-name">Flutter</div>
+              <div class="tech-badge-type">Cross-platform</div>
+            </div>
+            <div class="glass-card tech-badge">
+              <div class="tech-badge-icon">🗄️</div>
+              <div class="tech-badge-name">Oracle DB</div>
+              <div class="tech-badge-type">Database</div>
+            </div>
+            <div class="glass-card tech-badge">
+              <div class="tech-badge-icon">🐘</div>
+              <div class="tech-badge-name">PostgreSQL</div>
+              <div class="tech-badge-type">Database</div>
+            </div>
+            <div class="glass-card tech-badge">
+              <div class="tech-badge-icon">🔷</div>
+              <div class="tech-badge-name">Figma</div>
+              <div class="tech-badge-type">Design</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       PORTFOLIO SECTION
+  ====================================================== -->
+  <section id="portfolio" class="section">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-label reveal">Portfolio</div>
+        <h2 class="section-title reveal">Bizning ishlar</h2>
+        <p class="section-subtitle reveal">
+          Turli sohalardagi kompaniyalar uchun yaratgan raqamli yechimlarimiz.
+        </p>
+      </div>
+
+      <!-- Filter -->
+      <div class="portfolio-filter reveal">
+        <button class="filter-btn active" data-filter="all" id="filter-all">Barchasi</button>
+        <button class="filter-btn" data-filter="mobile" id="filter-mobile">📱 Mobile</button>
+        <button class="filter-btn" data-filter="web" id="filter-web">🌐 Web</button>
+        <button class="filter-btn" data-filter="design" id="filter-design">🎨 Dizayn</button>
+      </div>
+
+      <!-- Portfolio Grid -->
+      <div class="portfolio-grid">
+
+        <div class="portfolio-grid-item" data-category="mobile">
+          <div class="portfolio-card-placeholder">
+            <span class="portfolio-type-badge badge-mobile">Mobile</span>
+            <div class="portfolio-card-icon">📱</div>
+            <div class="portfolio-card-label">E-Commerce iOS App</div>
+          </div>
+        </div>
+
+        <div class="portfolio-grid-item" data-category="web">
+          <div class="portfolio-card-placeholder">
+            <span class="portfolio-type-badge badge-web">Web</span>
+            <div class="portfolio-card-icon">🌐</div>
+            <div class="portfolio-card-label">Corporate Platform</div>
+          </div>
+        </div>
+
+        <div class="portfolio-grid-item" data-category="design">
+          <div class="portfolio-card-placeholder">
+            <span class="portfolio-type-badge badge-design">Dizayn</span>
+            <div class="portfolio-card-icon">🎨</div>
+            <div class="portfolio-card-label">Brand Identity</div>
+          </div>
+        </div>
+
+        <div class="portfolio-grid-item" data-category="mobile">
+          <div class="portfolio-card-placeholder">
+            <span class="portfolio-type-badge badge-mobile">Mobile</span>
+            <div class="portfolio-card-icon">🚀</div>
+            <div class="portfolio-card-label">Delivery Android App</div>
+          </div>
+        </div>
+
+        <div class="portfolio-grid-item" data-category="web">
+          <div class="portfolio-card-placeholder">
+            <span class="portfolio-type-badge badge-web">Web</span>
+            <div class="portfolio-card-icon">💼</div>
+            <div class="portfolio-card-label">CRM Dashboard</div>
+          </div>
+        </div>
+
+        <div class="portfolio-grid-item" data-category="mobile">
+          <div class="portfolio-card-placeholder">
+            <span class="portfolio-type-badge badge-mobile">Mobile</span>
+            <div class="portfolio-card-icon">💳</div>
+            <div class="portfolio-card-label">FinTech App</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="text-align:center;margin-top:48px;" class="reveal">
+        <a href="#contact" class="btn btn-outline btn-lg" id="portfolio-cta-btn">
+          <i class="fas fa-handshake"></i> Loyihangiz haqida gaplashaylik
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================
+       TEAM SECTION
+  ====================================================== -->
+  <section id="team" class="section">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-label reveal">Jamoamiz</div>
+        <h2 class="section-title reveal">Orqamizda kimlar?</h2>
+        <p class="section-subtitle reveal">
+          Har biri o'z sohasida tajribali va ishtiyoqli mutaxassislardan iborat
+          kichik lekin samarali jamoa.
+        </p>
+      </div>
+
+      <div class="team-grid">
+
+        <!-- Member 1 -->
+        <div class="glass-card team-card reveal reveal-delay-1">
+          <div class="team-avatar-wrap">
+            <div class="team-avatar-ring">
+              <div class="team-avatar-ring-inner"></div>
+            </div>
+            <div class="team-avatar-placeholder">A</div>
+          </div>
+          <div class="team-role-badge">Co-founder</div>
+          <h4 class="team-name">Asilbek Yusupov</h4>
+          <p class="team-position">Lead iOS Developer</p>
+          <p class="team-bio">Swift va Objective-C bo'yicha 6 yillik tajriba. App Store'da 10+ muvaffaqiyatli loyiha. WWDC ishtirokchisi.</p>
+          <div class="team-socials">
+            <a href="#" class="team-social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="team-social-link" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" class="team-social-link" title="Telegram"><i class="fab fa-telegram"></i></a>
+          </div>
+        </div>
+
+        <!-- Member 2 -->
+        <div class="glass-card team-card reveal reveal-delay-2">
+          <div class="team-avatar-wrap">
+            <div class="team-avatar-ring">
+              <div class="team-avatar-ring-inner"></div>
+            </div>
+            <div class="team-avatar-placeholder" style="background:linear-gradient(135deg,#8b5cf6,#06b6d4)">B</div>
+          </div>
+          <div class="team-role-badge">Co-founder</div>
+          <h4 class="team-name">Bobur Rahimov</h4>
+          <p class="team-position">Backend Architect</p>
+          <p class="team-bio">Java va Spring Boot ustasi. Enterprise tizimlar va microservices arxitekturasi bo'yicha mutaxassis. Oracle DBA.</p>
+          <div class="team-socials">
+            <a href="#" class="team-social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="team-social-link" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" class="team-social-link" title="Telegram"><i class="fab fa-telegram"></i></a>
+          </div>
+        </div>
+
+        <!-- Member 3 -->
+        <div class="glass-card team-card reveal reveal-delay-3">
+          <div class="team-avatar-wrap">
+            <div class="team-avatar-ring">
+              <div class="team-avatar-ring-inner"></div>
+            </div>
+            <div class="team-avatar-placeholder" style="background:linear-gradient(135deg,#06b6d4,#10b981)">S</div>
+          </div>
+          <div class="team-role-badge">Senior</div>
+          <h4 class="team-name">Sarvinoz Mirzayeva</h4>
+          <p class="team-position">UI/UX & Frontend Lead</p>
+          <p class="team-bio">Figma va React'da chiroyli va samarali interfeyslar yaratadi. 4 yil davomida 20+ loyiha dizaynini yaratgan.</p>
+          <div class="team-socials">
+            <a href="#" class="team-social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="team-social-link" title="Dribbble"><i class="fab fa-dribbble"></i></a>
+            <a href="#" class="team-social-link" title="Telegram"><i class="fab fa-telegram"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================
+       TESTIMONIALS SECTION
+  ====================================================== -->
+  <section id="testimonials" class="section">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-label reveal">Mijozlar fikri</div>
+        <h2 class="section-title reveal">Ular nima deydi?</h2>
+      </div>
+
+      <div class="testimonials-grid">
+
+        <div class="glass-card testimonial-card reveal reveal-delay-1">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">
+            Olab Tech jamoasi bilan ishlash juda qulay bo'ldi. Ular loyihani o'z vaqtida topshirdi va natijaidan juda mamnunmiz. Professional yondashuv va sifatli kod.
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">R</div>
+            <div>
+              <div class="testimonial-name">Rustam Xasanov</div>
+              <div class="testimonial-company">CEO, TechStart Uz</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card testimonial-card reveal reveal-delay-2">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">
+            Mobile ilovamizni Olab Tech bilan ishlab chiqdik. Dizayni ajoyib, ishlashi tezkor va xatosiz. Foydalanuvchilarimiz juda mamnun. Tavsiya qilaman!
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background:linear-gradient(135deg,#8b5cf6,#06b6d4)">M</div>
+            <div>
+              <div class="testimonial-name">Malika Toshmatova</div>
+              <div class="testimonial-company">Founder, EduApp</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card testimonial-card reveal reveal-delay-3">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+          </div>
+          <p class="testimonial-text">
+            Backend sistemamizni qayta qurdik Olab Tech bilan. Endi tizim 10x tezroq ishlaydi. Texnik bilim va muloqot ko'nikmalari yuqori darajada.
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background:linear-gradient(135deg,#06b6d4,#10b981)">J</div>
+            <div>
+              <div class="testimonial-name">Jahongir Nazarov</div>
+              <div class="testimonial-company">CTO, RetailMax</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================
+       NEWSLETTER SECTION
+  ====================================================== -->
+  <section id="newsletter">
+    <div class="container">
+      <div class="newsletter-inner reveal">
+        <h3>Yangiliklar bilan xabardor bo'ling</h3>
+        <p>IT sohasidagi so'nggi tendensiyalar va Olab Tech yangiliklari haqida birinchi bo'lib biling.</p>
+        <form class="newsletter-form" id="newsletter-form">
+          <input type="email" placeholder="email@example.com" id="newsletter-email" required>
+          <button type="submit" id="newsletter-btn">Obuna bo'lish</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       CONTACT SECTION
+  ====================================================== -->
+  <section id="contact" class="section">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-label reveal">Aloqa</div>
+        <h2 class="section-title reveal">Loyihangizni muhokama qilaylik</h2>
+        <p class="section-subtitle reveal">
+          G'oyangiz bormi? Biz uni raqamli haqiqatga aylantiramiz.
+          Bugun murojaat qiling.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Contact Info -->
+        <div class="reveal-left">
+          <h3>Bog'laning</h3>
+          <p>Loyihangiz haqida suhbatlashishga doimo tayyormiz. Ish soatlarida va undan tashqarida ham javob beramiz.</p>
+          <div class="contact-info-items">
+            <div class="contact-info-item">
+              <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="contact-info-text">
+                <label>Manzil</label>
+                <span>Toshkent shahar, O'zbekiston</span>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon"><i class="fas fa-phone-alt"></i></div>
+              <div class="contact-info-text">
+                <label>Telefon</label>
+                <a href="tel:+998900240240">+998 90 024 02 40</a>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+              <div class="contact-info-text">
+                <label>Email</label>
+                <a href="mailto:olab.innovation@gmail.com">olab.innovation@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon"><i class="fab fa-telegram"></i></div>
+              <div class="contact-info-text">
+                <label>Telegram</label>
+                <a href="https://t.me/olabtech" target="_blank" rel="noopener">@olabtech</a>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon"><i class="fas fa-clock"></i></div>
+              <div class="contact-info-text">
+                <label>Ish soatlari</label>
+                <span>Du–Juma: 09:00 – 18:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="reveal-right">
+          <form class="contact-form" id="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-name">Ismingiz</label>
+                <input type="text" id="contact-name" placeholder="Alisher Karimov">
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email</label>
+                <input type="email" id="contact-email" placeholder="alisher@company.uz">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contact-service">Xizmat turi</label>
+              <select id="contact-service">
+                <option value="">Tanlang...</option>
+                <option value="mobile">📱 Mobile Ilova</option>
+                <option value="web">🌐 Web Platforma</option>
+                <option value="backend">🔧 Backend Tizim</option>
+                <option value="design">🎨 UI/UX Dizayn</option>
+                <option value="branding">💎 Brending</option>
+                <option value="support">🛡️ Texnik yordam</option>
+                <option value="other">💬 Boshqa</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Xabar</label>
+              <textarea id="contact-message" placeholder="Loyihangiz haqida qisqacha yozing: maqsad, funksiyalar, muddatlar..."></textarea>
+            </div>
+            <div id="form-status" class="form-status"></div>
+            <button type="submit" class="form-submit-btn" id="contact-submit-btn">
+              <i class="fas fa-paper-plane"></i> Xabar yuborish
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       FOOTER
+  ====================================================== -->
+  <footer>
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+
+          <!-- Brand -->
+          <div class="footer-brand">
+            <div class="footer-brand-logo">
+              <div class="brand-icon">O</div>
+              <span>Olab Tech</span>
+            </div>
+            <p class="footer-brand-desc">
+              O'zbekistondagi mobile va web ilovalar ishlab chiqish kompaniyasi.
+              G'oyangizni raqamli haqiqatga aylantiramiz.
+            </p>
+            <div class="footer-social-links">
+              <a href="#" class="footer-social-link" title="Telegram" id="footer-telegram"><i class="fab fa-telegram"></i></a>
+              <a href="#" class="footer-social-link" title="LinkedIn" id="footer-linkedin"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="footer-social-link" title="GitHub" id="footer-github"><i class="fab fa-github"></i></a>
+              <a href="#" class="footer-social-link" title="Instagram" id="footer-instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="footer-social-link" title="Facebook" id="footer-facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+          </div>
+
+          <!-- Xizmatlar -->
+          <div class="footer-col">
+            <h5>Xizmatlar</h5>
+            <ul>
+              <li><a href="#services">Mobile Ilovalar</a></li>
+              <li><a href="#services">Web Ilovalar</a></li>
+              <li><a href="#services">Backend Tizimlar</a></li>
+              <li><a href="#services">UI/UX Dizayn</a></li>
+              <li><a href="#services">Brending</a></li>
+              <li><a href="#services">Texnik Qo'llab-quvvatlash</a></li>
+            </ul>
+          </div>
+
+          <!-- Kompaniya -->
+          <div class="footer-col">
+            <h5>Kompaniya</h5>
+            <ul>
+              <li><a href="#about">Biz haqimizda</a></li>
+              <li><a href="#team">Jamoa</a></li>
+              <li><a href="#portfolio">Loyihalar</a></li>
+              <li><a href="#testimonials">Mijozlar fikri</a></li>
+              <li><a href="#contact">Aloqa</a></li>
+            </ul>
+          </div>
+
+          <!-- Aloqa -->
+          <div class="footer-col">
+            <h5>Aloqa</h5>
+            <ul>
+              <li><a href="tel:+998900240240">+998 90 024 02 40</a></li>
+              <li><a href="mailto:olab.innovation@gmail.com">olab.innovation@gmail.com</a></li>
+              <li><a href="https://t.me/olabtech" target="_blank" rel="noopener">@olabtech (Telegram)</a></li>
+              <li><a href="#">Toshkent, O'zbekiston</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <p class="footer-copyright">
+            &copy; 2026 <span>Olab Tech</span>. Barcha huquqlar himoyalangan.
+          </p>
+          <div class="footer-bottom-links">
+            <a href="#">Maxfiylik siyosati</a>
+            <a href="#">Foydalanish shartlari</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Yuqoriga">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Custom JS -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
