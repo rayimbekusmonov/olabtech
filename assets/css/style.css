@@ -379,6 +379,20 @@ h1,h2,h3,h4,h5,h6 {
   to   { width: 100%; }
 }
 
+/* Preloader logo image */
+.preloader-logo-img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  /* Dark rejimda: logoni oq rang */
+  filter: invert(1) brightness(2);
+  animation: pulse-glow 2s ease infinite;
+  margin-bottom: -8px;
+}
+[data-theme="light"] .preloader-logo-img {
+  filter: invert(0.6) sepia(1) saturate(5) hue-rotate(220deg) brightness(0.8);
+}
+
 /* =========================================================
    NAVBAR
    ========================================================= */
@@ -417,17 +431,30 @@ h1,h2,h3,h4,h5,h6 {
   text-decoration: none;
 }
 .brand-icon {
-  width: 36px;
-  height: 36px;
-  background: var(--accent-gradient);
+  width: 44px;
+  height: 44px;
+  background: transparent;
   border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1rem;
-  font-weight: 900;
-  color: #fff;
-  animation: pulse-glow 3s ease infinite;
+  overflow: visible;
+  flex-shrink: 0;
+}
+.brand-logo-img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  /* Logo qora, dark rejimda oq qilish */
+  filter: invert(1) brightness(1.5);
+  transition: filter var(--transition-base), transform var(--transition-base);
+}
+.navbar-brand:hover .brand-logo-img {
+  transform: rotate(-5deg) scale(1.1);
+}
+/* Light rejimda logoni to'q rang */
+[data-theme="light"] .brand-logo-img {
+  filter: invert(0.15) brightness(0.6);
 }
 
 /* Nav links */
