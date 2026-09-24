@@ -381,16 +381,13 @@ h1,h2,h3,h4,h5,h6 {
 
 /* Preloader logo image */
 .preloader-logo-img {
-  width: 72px;
-  height: 72px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
-  /* Dark rejimda: logoni oq rang */
-  filter: invert(1) brightness(2);
+  border-radius: 18px;
   animation: pulse-glow 2s ease infinite;
-  margin-bottom: -8px;
-}
-[data-theme="light"] .preloader-logo-img {
-  filter: invert(0.6) sepia(1) saturate(5) hue-rotate(220deg) brightness(0.8);
+  margin-bottom: 4px;
+  box-shadow: 0 0 30px rgba(99,102,241,0.5);
 }
 
 /* =========================================================
@@ -445,16 +442,15 @@ h1,h2,h3,h4,h5,h6 {
   width: 44px;
   height: 44px;
   object-fit: contain;
-  /* Logo qora, dark rejimda oq qilish */
-  filter: invert(1) brightness(1.5);
-  transition: filter var(--transition-base), transform var(--transition-base);
+  border-radius: 10px;
+  transition: transform var(--transition-base);
 }
 .navbar-brand:hover .brand-logo-img {
   transform: rotate(-5deg) scale(1.1);
 }
-/* Light rejimda logoni to'q rang */
 [data-theme="light"] .brand-logo-img {
-  filter: invert(0.15) brightness(0.6);
+  /* Yangi logo allaqachon to'g'ri rangda — filter shart emas */
+  filter: none;
 }
 
 /* Nav links */
