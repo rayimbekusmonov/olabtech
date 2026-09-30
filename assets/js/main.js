@@ -146,12 +146,8 @@
      TYPING EFFECT
   ------------------------------------------------------- */
   const typedTextEl = document.getElementById('typed-text');
-  const phrases = [
-    'Mobil ilovalar',
-    'Veb-platformalar',
-    'Backend tizimlar',
-    'UI/UX dizayn',
-    'Desktop dasturlar',
+  let phrases = (window.__olabI18nPhrases) || [
+    'Mobil ilovalar', 'Veb-platformalar', 'Backend tizimlar', 'UI/UX dizayn', 'Desktop dasturlar'
   ];
   let phraseIndex = 0;
   let charIndex = 0;
@@ -160,7 +156,7 @@
 
   function typeWriter() {
     const current = phrases[phraseIndex];
-
+    if (!current) return;
     if (isDeleting) {
       typedTextEl.textContent = current.substring(0, charIndex - 1);
       charIndex--;
@@ -168,20 +164,27 @@
       typedTextEl.textContent = current.substring(0, charIndex + 1);
       charIndex++;
     }
-
     let speed = isDeleting ? 50 : 90;
-
     if (!isDeleting && charIndex === current.length) {
-      speed = 2200;
-      isDeleting = true;
+      speed = 2200; isDeleting = true;
     } else if (isDeleting && charIndex === 0) {
       isDeleting = false;
       phraseIndex = (phraseIndex + 1) % phrases.length;
       speed = 350;
     }
-
     typeTimeout = setTimeout(typeWriter, speed);
   }
+
+  // Expose for i18n.js to swap phrases on language change
+  window.__olabTypewriter = {
+    setPhrases: function(newPhrases) {
+      clearTimeout(typeTimeout);
+      phrases = newPhrases;
+      phraseIndex = 0; charIndex = 0; isDeleting = false;
+      if (typedTextEl) typedTextEl.textContent = '';
+      setTimeout(typeWriter, 400);
+    }
+  };
 
   if (typedTextEl) {
     setTimeout(typeWriter, 1000);
