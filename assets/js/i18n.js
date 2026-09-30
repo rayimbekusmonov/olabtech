@@ -1,70 +1,97 @@
 ﻿/* =========================================================
-   Olab Tech — i18n (Internationalization)
-   Tillar: O'zbek (uz) | Русский (ru) | English (en)
+   Olab Tech - i18n (Internationalization)
+   Tillar: O'zbek (uz) | Russkiy (ru) | English (en)
    ========================================================= */
 
 (function () {
   'use strict';
 
-  const translations = {
+  var langMeta = {
+    uz: { flag: 'UZ', code: 'UZ', emoji: '\uD83C\uDDFA\uD83C\uDDFF' },
+    ru: { flag: 'RU', code: 'RU', emoji: '\uD83C\uDDF7\uD83C\uDDFA' },
+    en: { flag: 'EN', code: 'EN', emoji: '\uD83C\uDDEC\uD83C\uDDE7' }
+  };
+
+  var translations = {
     uz: {
-      'nav.home': "Bosh sahifa", 'nav.about': "Biz haqimizda", 'nav.services': "Xizmatlar",
-      'nav.tech': "Texnologiyalar", 'nav.portfolio': "Loyihalar", 'nav.team': "Jamoa",
-      'nav.contact-link': "Aloqa", 'nav.contact': "Bog'lanish",
-      'hero.badge': "Toshkent, O'zbekiston · 2019 yildan",
-      'hero.title1': "Biznesingiz uchun", 'hero.title2': "Raqamli Kelajak",
-      'hero.typing-label': "Biz yaratamiz:",
-      'hero.desc': "Olab Tech — mobil ilovalar, veb-platformalar va murakkab backend tizimlari yaratuvchi IT kompaniya. iOS, Android, Desktop va Web — har qanday platforma uchun, har qanday darajadagi loyihani amalga oshiramiz.",
-      'hero.btn-projects': "Loyihalarimiz", 'hero.btn-contact': "Murojaat qilish",
-      'hero.stat1-label': "Loyiha", 'hero.stat2-label': "Mijoz",
-      'hero.stat3-label': "Yil tajriba", 'hero.stat4-label': "Muvaffaqiyat",
-      'typing.phrases': ['Mobil ilovalar', 'Veb-platformalar', 'Backend tizimlar', 'UI/UX dizayn', 'Desktop dasturlar'],
+      'nav.home': 'Bosh sahifa',
+      'nav.about': 'Biz haqimizda',
+      'nav.services': 'Xizmatlar',
+      'nav.tech': 'Texnologiyalar',
+      'nav.portfolio': 'Loyihalar',
+      'nav.team': 'Jamoa',
+      'nav.contact-link': 'Aloqa',
+      'nav.contact': "Bog'lanish",
+      'hero.badge': "Toshkent, O'zbekiston \u00B7 2019 yildan",
+      'hero.title1': 'Biznesingiz uchun',
+      'hero.title2': 'Raqamli Kelajak',
+      'hero.typing-label': 'Biz yaratamiz:',
+      'hero.desc': "Olab Tech \u2014 mobil ilovalar, veb-platformalar va murakkab backend tizimlari yaratuvchi IT kompaniya. iOS, Android, Desktop va Web \u2014 har qanday platforma uchun, har qanday darajadagi loyihani amalga oshiramiz.",
+      'hero.btn-projects': 'Loyihalarimiz',
+      'hero.btn-contact': 'Murojaat qilish',
+      'hero.stat1-label': 'Loyiha',
+      'hero.stat2-label': 'Mijoz',
+      'hero.stat3-label': 'Yil tajriba',
+      'hero.stat4-label': 'Muvaffaqiyat',
+      'typing.phrases': ['Mobil ilovalar', 'Veb-platformalar', 'Backend tizimlar', 'UI/UX dizayn', 'Desktop dasturlar']
     },
     ru: {
-      'nav.home': "Главная", 'nav.about': "О нас", 'nav.services': "Услуги",
-      'nav.tech': "Технологии", 'nav.portfolio': "Проекты", 'nav.team': "Команда",
-      'nav.contact-link': "Контакты", 'nav.contact': "Связаться",
-      'hero.badge': "Ташкент, Узбекистан · с 2019 года",
-      'hero.title1': "Для вашего бизнеса", 'hero.title2': "Цифровое будущее",
-      'hero.typing-label': "Мы создаём:",
-      'hero.desc': "Olab Tech — IT-компания, разрабатывающая мобильные приложения, веб-платформы и сложные backend-системы. iOS, Android, Desktop и Web — для любой платформы, любого уровня сложности.",
-      'hero.btn-projects': "Наши проекты", 'hero.btn-contact': "Написать нам",
-      'hero.stat1-label': "Проектов", 'hero.stat2-label': "Клиентов",
-      'hero.stat3-label': "Лет опыта", 'hero.stat4-label': "Успешность",
-      'typing.phrases': ['Мобильные приложения', 'Веб-платформы', 'Backend системы', 'UI/UX дизайн', 'Desktop приложения'],
+      'nav.home': '\u0413\u043B\u0430\u0432\u043D\u0430\u044F',
+      'nav.about': '\u041E \u043D\u0430\u0441',
+      'nav.services': '\u0423\u0441\u043B\u0443\u0433\u0438',
+      'nav.tech': '\u0422\u0435\u0445\u043D\u043E\u043B\u043E\u0433\u0438\u0438',
+      'nav.portfolio': '\u041F\u0440\u043E\u0435\u043A\u0442\u044B',
+      'nav.team': '\u041A\u043E\u043C\u0430\u043D\u0434\u0430',
+      'nav.contact-link': '\u041A\u043E\u043D\u0442\u0430\u043A\u0442\u044B',
+      'nav.contact': '\u0421\u0432\u044F\u0437\u0430\u0442\u044C\u0441\u044F',
+      'hero.badge': '\u0422\u0430\u0448\u043A\u0435\u043D\u0442, \u0423\u0437\u0431\u0435\u043A\u0438\u0441\u0442\u0430\u043D \u00B7 \u0441 2019 \u0433\u043E\u0434\u0430',
+      'hero.title1': '\u0414\u043B\u044F \u0432\u0430\u0448\u0435\u0433\u043E \u0431\u0438\u0437\u043D\u0435\u0441\u0430',
+      'hero.title2': '\u0426\u0438\u0444\u0440\u043E\u0432\u043E\u0435 \u0431\u0443\u0434\u0443\u0449\u0435\u0435',
+      'hero.typing-label': '\u041C\u044B \u0441\u043E\u0437\u0434\u0430\u0451\u043C:',
+      'hero.desc': 'Olab Tech \u2014 IT-\u043A\u043E\u043C\u043F\u0430\u043D\u0438\u044F, \u0440\u0430\u0437\u0440\u0430\u0431\u0430\u0442\u044B\u0432\u0430\u044E\u0449\u0430\u044F \u043C\u043E\u0431\u0438\u043B\u044C\u043D\u044B\u0435 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F, \u0432\u0435\u0431-\u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u044B \u0438 \u0441\u043B\u043E\u0436\u043D\u044B\u0435 backend-\u0441\u0438\u0441\u0442\u0435\u043C\u044B. iOS, Android, Desktop \u0438 Web \u2014 \u0434\u043B\u044F \u043B\u044E\u0431\u043E\u0439 \u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u044B, \u043B\u044E\u0431\u043E\u0433\u043E \u0443\u0440\u043E\u0432\u043D\u044F \u0441\u043B\u043E\u0436\u043D\u043E\u0441\u0442\u0438.',
+      'hero.btn-projects': '\u041D\u0430\u0448\u0438 \u043F\u0440\u043E\u0435\u043A\u0442\u044B',
+      'hero.btn-contact': '\u041D\u0430\u043F\u0438\u0441\u0430\u0442\u044C \u043D\u0430\u043C',
+      'hero.stat1-label': '\u041F\u0440\u043E\u0435\u043A\u0442\u043E\u0432',
+      'hero.stat2-label': '\u041A\u043B\u0438\u0435\u043D\u0442\u043E\u0432',
+      'hero.stat3-label': '\u041B\u0435\u0442 \u043E\u043F\u044B\u0442\u0430',
+      'hero.stat4-label': '\u0423\u0441\u043F\u0435\u0448\u043D\u043E\u0441\u0442\u044C',
+      'typing.phrases': ['\u041C\u043E\u0431\u0438\u043B\u044C\u043D\u044B\u0435 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F', '\u0412\u0435\u0431-\u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u044B', 'Backend \u0441\u0438\u0441\u0442\u0435\u043C\u044B', 'UI/UX \u0434\u0438\u0437\u0430\u0439\u043D', 'Desktop \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F']
     },
     en: {
-      'nav.home': "Home", 'nav.about': "About Us", 'nav.services': "Services",
-      'nav.tech': "Technologies", 'nav.portfolio': "Projects", 'nav.team': "Team",
-      'nav.contact-link': "Contact", 'nav.contact': "Get in Touch",
-      'hero.badge': "Tashkent, Uzbekistan · Since 2019",
-      'hero.title1': "For Your Business", 'hero.title2': "Digital Future",
-      'hero.typing-label': "We build:",
-      'hero.desc': "Olab Tech is an IT company building mobile apps, web platforms, and complex backend systems. iOS, Android, Desktop & Web — for any platform, any level of complexity.",
-      'hero.btn-projects': "Our Projects", 'hero.btn-contact': "Contact Us",
-      'hero.stat1-label': "Projects", 'hero.stat2-label': "Clients",
-      'hero.stat3-label': "Years Exp.", 'hero.stat4-label': "Success Rate",
-      'typing.phrases': ['Mobile Apps', 'Web Platforms', 'Backend Systems', 'UI/UX Design', 'Desktop Software'],
+      'nav.home': 'Home',
+      'nav.about': 'About Us',
+      'nav.services': 'Services',
+      'nav.tech': 'Technologies',
+      'nav.portfolio': 'Projects',
+      'nav.team': 'Team',
+      'nav.contact-link': 'Contact',
+      'nav.contact': 'Get in Touch',
+      'hero.badge': 'Tashkent, Uzbekistan \u00B7 Since 2019',
+      'hero.title1': 'For Your Business',
+      'hero.title2': 'Digital Future',
+      'hero.typing-label': 'We build:',
+      'hero.desc': 'Olab Tech is an IT company building mobile apps, web platforms, and complex backend systems. iOS, Android, Desktop & Web \u2014 for any platform, any level of complexity.',
+      'hero.btn-projects': 'Our Projects',
+      'hero.btn-contact': 'Contact Us',
+      'hero.stat1-label': 'Projects',
+      'hero.stat2-label': 'Clients',
+      'hero.stat3-label': 'Years Exp.',
+      'hero.stat4-label': 'Success Rate',
+      'typing.phrases': ['Mobile Apps', 'Web Platforms', 'Backend Systems', 'UI/UX Design', 'Desktop Software']
     }
   };
 
-  const langMeta = {
-    uz: { flag: '\uD83C\uDDFA\uD83C\uDDFF', code: 'UZ' },
-    ru: { flag: '\uD83C\uDDF7\uD83C\uDDFA', code: 'RU' },
-    en: { flag: '\uD83C\uDDEC\uD83C\uDDE7', code: 'EN' },
-  };
-
-  let currentLang = localStorage.getItem('olab-lang') || 'uz';
+  var currentLang = localStorage.getItem('olab-lang') || 'uz';
 
   function applyTranslations(lang) {
-    const t = translations[lang];
+    var t = translations[lang];
     if (!t) return;
 
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const key = el.getAttribute('data-i18n');
+    document.querySelectorAll('[data-i18n]').forEach(function(el) {
+      var key = el.getAttribute('data-i18n');
       if (t[key] !== undefined) {
         if (el.tagName === 'A' && el.querySelector('i')) {
-          const icon = el.querySelector('i').outerHTML;
+          var icon = el.querySelector('i').outerHTML;
           el.innerHTML = icon + ' ' + t[key];
         } else {
           el.textContent = t[key];
@@ -72,44 +99,46 @@
       }
     });
 
-    const heroBadge = document.querySelector('.hero-badge');
+    var heroBadge = document.querySelector('.hero-badge');
     if (heroBadge) {
-      const dot = heroBadge.querySelector('.hero-badge-dot');
+      var dot = heroBadge.querySelector('.hero-badge-dot');
       heroBadge.textContent = t['hero.badge'] || '';
       if (dot) heroBadge.prepend(dot);
     }
 
-    const titleEl = document.querySelector('.hero-title');
+    var titleEl = document.querySelector('.hero-title');
     if (titleEl) {
-      const gradSpan = titleEl.querySelector('.gradient-text');
+      var gradSpan = titleEl.querySelector('.gradient-text');
       if (gradSpan && titleEl.childNodes[0]) {
         titleEl.childNodes[0].textContent = (t['hero.title1'] || '') + '\n';
         gradSpan.textContent = t['hero.title2'] || '';
       }
     }
 
-    const typingLabel = document.querySelector('.typing-label');
+    var typingLabel = document.querySelector('.typing-label');
     if (typingLabel) typingLabel.textContent = t['hero.typing-label'] || '';
 
-    const heroDesc = document.querySelector('.hero-desc');
+    var heroDesc = document.querySelector('.hero-desc');
     if (heroDesc) heroDesc.textContent = t['hero.desc'] || '';
 
-    const btnProjects = document.querySelector('#hero-portfolio-btn');
+    var btnProjects = document.querySelector('#hero-portfolio-btn');
     if (btnProjects) {
-      const icon = btnProjects.querySelector('i');
+      var icon1 = btnProjects.querySelector('i');
       btnProjects.textContent = t['hero.btn-projects'] || '';
-      if (icon) btnProjects.prepend(icon);
+      if (icon1) btnProjects.prepend(icon1);
     }
-    const btnContact = document.querySelector('#hero-contact-btn');
+    var btnContact = document.querySelector('#hero-contact-btn');
     if (btnContact) {
-      const icon = btnContact.querySelector('i');
+      var icon2 = btnContact.querySelector('i');
       btnContact.textContent = t['hero.btn-contact'] || '';
-      if (icon) btnContact.prepend(icon);
+      if (icon2) btnContact.prepend(icon2);
     }
 
-    const statLabels = document.querySelectorAll('.hero-stat-label');
-    const statKeys = ['hero.stat1-label', 'hero.stat2-label', 'hero.stat3-label', 'hero.stat4-label'];
-    statLabels.forEach((el, i) => { if (t[statKeys[i]]) el.textContent = t[statKeys[i]]; });
+    var statLabels = document.querySelectorAll('.hero-stat-label');
+    var statKeys = ['hero.stat1-label', 'hero.stat2-label', 'hero.stat3-label', 'hero.stat4-label'];
+    statLabels.forEach(function(el, i) {
+      if (t[statKeys[i]]) el.textContent = t[statKeys[i]];
+    });
 
     if (t['typing.phrases'] && window.__olabTypewriter) {
       window.__olabTypewriter.setPhrases(t['typing.phrases']);
@@ -117,13 +146,13 @@
       window.__olabI18nPhrases = t['typing.phrases'];
     }
 
-    const meta = langMeta[lang];
-    const flagEl = document.getElementById('lang-flag');
-    const codeEl = document.getElementById('lang-code');
-    if (flagEl) flagEl.textContent = meta.flag;
+    var meta = langMeta[lang];
+    var flagEl = document.getElementById('lang-flag');
+    var codeEl = document.getElementById('lang-code');
+    if (flagEl) flagEl.textContent = meta.emoji;
     if (codeEl) codeEl.textContent = meta.code;
 
-    document.querySelectorAll('.lang-option').forEach(btn => {
+    document.querySelectorAll('.lang-option').forEach(function(btn) {
       btn.classList.toggle('active', btn.dataset.lang === lang);
     });
 
@@ -132,9 +161,9 @@
     currentLang = lang;
   }
 
-  const dropdown = document.getElementById('lang-dropdown');
-  const langBtn  = document.getElementById('lang-btn');
-  const langMenu = document.getElementById('lang-menu');
+  var dropdown = document.getElementById('lang-dropdown');
+  var langBtn  = document.getElementById('lang-btn');
+  var langMenu = document.getElementById('lang-menu');
 
   if (langBtn) {
     langBtn.addEventListener('click', function(e) {
