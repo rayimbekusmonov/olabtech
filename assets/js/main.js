@@ -368,6 +368,191 @@
   });
 
   /* -------------------------------------------------------
+     TEAM CAROUSEL (Auto-rotating, looping & responsive)
+  ------------------------------------------------------- */
+  const teamWrapper = document.getElementById('team-carousel-wrapper');
+  const teamTrack = document.getElementById('team-carousel-track');
+  const teamPrev = document.getElementById('team-prev');
+  const teamNext = document.getElementById('team-next');
+  const teamDotsContainer = document.getElementById('team-carousel-dots');
+
+  if (teamTrack && teamWrapper) {
+    const cards = Array.from(teamTrack.querySelectorAll('.team-card'));
+    const totalCards = cards.length;
+    let currentIndex = 0;
+    let autoPlayTimer = null;
+    let isPaused = false;
+
+    function getVisibleCardsCount() {
+      const w = window.innerWidth;
+      if (w <= 640) return 1;
+      if (w <= 1023) return 2;
+      return 3;
+    }
+
+    function getMaxIndex() {
+      const visible = getVisibleCardsCount();
+      return Math.max(0, totalCards - visible);
+    }
+
+    function createDots() {
+      if (!teamDotsContainer) return;
+      teamDotsContainer.innerHTML = '';
+      const maxIdx = getMaxIndex();
+      for (let i = 0; i <= maxIdx; i++) {
+        const dot = document.createElement('button');
+        dot.className = 'team-dot' + (i === currentIndex ? ' active' : '');
+        dot.setAttribute('aria-label', (i + 1) + '-sahifa');
+        dot.addEventListener('click', () => {
+          goToSlide(i);
+          resetAutoPlay();
+        });
+        teamDotsContainer.appendChild(dot);
+      }
+    }
+
+    function updateDots() {
+      if (!teamDotsContainer) return;
+      const dots = teamDotsContainer.querySelectorAll('.team-dot');
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === currentIndex);
+      });
+    }
+
+    function updateCarousel(animated = true) {
+      const maxIdx = getMaxIndex();
+      if (currentIndex > maxIdx) currentIndex = 0;
+      if (currentIndex < 0) currentIndex = maxIdx;
+
+      if (!animated) {
+        teamTrack.style.transition = 'none';
+      } else {
+        teamTrack.style.transition = 'transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)';
+      }
+
+      if (cards.length > 0) {
+        const firstCard = cards[0];
+        const cardWidth = firstCard.offsetWidth;
+        const style = window.getComputedStyle(teamTrack);
+        const gap = parseFloat(style.gap) || 24;
+        const offset = currentIndex * (cardWidth + gap);
+        teamTrack.style.transform = `translateX(-${offset}px)`;
+      }
+
+      updateDots();
+    }
+
+    function goToSlide(index) {
+      currentIndex = index;
+      updateCarousel(true);
+    }
+
+    function nextSlide() {
+      const maxIdx = getMaxIndex();
+      if (currentIndex >= maxIdx) {
+        currentIndex = 0;
+      } else {
+        currentIndex++;
+      }
+      updateCarousel(true);
+    }
+
+    function prevSlide() {
+      const maxIdx = getMaxIndex();
+      if (currentIndex <= 0) {
+        currentIndex = maxIdx;
+      } else {
+        currentIndex--;
+      }
+      updateCarousel(true);
+    }
+
+    if (teamNext) {
+      teamNext.addEventListener('click', () => {
+        nextSlide();
+        resetAutoPlay();
+      });
+    }
+
+    if (teamPrev) {
+      teamPrev.addEventListener('click', () => {
+        prevSlide();
+        resetAutoPlay();
+      });
+    }
+
+    function startAutoPlay() {
+      stopAutoPlay();
+      autoPlayTimer = setInterval(() => {
+        if (!isPaused) {
+          nextSlide();
+        }
+      }, 3500);
+    }
+
+    function stopAutoPlay() {
+      if (autoPlayTimer) clearInterval(autoPlayTimer);
+      autoPlayTimer = null;
+    }
+
+    function resetAutoPlay() {
+      stopAutoPlay();
+      startAutoPlay();
+    }
+
+    // Pause on hover
+    teamWrapper.addEventListener('mouseenter', () => { isPaused = true; });
+    teamWrapper.addEventListener('mouseleave', () => { isPaused = false; });
+
+    // Touch swipe support for mobile
+    let touchStartX = 0;
+    let touchCurrentX = 0;
+    let isSwiping = false;
+
+    teamWrapper.addEventListener('touchstart', (e) => {
+      isPaused = true;
+      touchStartX = e.touches[0].clientX;
+      touchCurrentX = touchStartX;
+      isSwiping = true;
+    }, { passive: true });
+
+    teamWrapper.addEventListener('touchmove', (e) => {
+      if (!isSwiping) return;
+      touchCurrentX = e.touches[0].clientX;
+    }, { passive: true });
+
+    teamWrapper.addEventListener('touchend', () => {
+      if (!isSwiping) return;
+      isSwiping = false;
+      const diff = touchStartX - touchCurrentX;
+      if (Math.abs(diff) > 40) {
+        if (diff > 0) {
+          nextSlide();
+        } else {
+          prevSlide();
+        }
+        resetAutoPlay();
+      }
+      setTimeout(() => { isPaused = false; }, 1000);
+    });
+
+    // Resize handler
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        createDots();
+        updateCarousel(false);
+      }, 150);
+    });
+
+    // Initialize
+    createDots();
+    updateCarousel(false);
+    startAutoPlay();
+  }
+
+  /* -------------------------------------------------------
      CONTACT FORM
   ------------------------------------------------------- */
   const contactForm = document.getElementById('contact-form');
