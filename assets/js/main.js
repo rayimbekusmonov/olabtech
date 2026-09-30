@@ -147,11 +147,11 @@
   ------------------------------------------------------- */
   const typedTextEl = document.getElementById('typed-text');
   const phrases = [
-    'Zamonaviy mobil ilovalar',
-    'Keng ko\'lamli veb-platformalar',
-    'Kuchli backend tizimlar',
-    'Mukammal UI/UX dizayn',
-    'Raqamli marketing yechimlar',
+    'Mobil ilovalar',
+    'Veb-platformalar',
+    'Backend tizimlar',
+    'UI/UX dizayn',
+    'Desktop dasturlar',
   ];
   let phraseIndex = 0;
   let charIndex = 0;
@@ -169,15 +169,15 @@
       charIndex++;
     }
 
-    let speed = isDeleting ? 60 : 110;
+    let speed = isDeleting ? 50 : 90;
 
     if (!isDeleting && charIndex === current.length) {
-      speed = 2000;
+      speed = 2200;
       isDeleting = true;
     } else if (isDeleting && charIndex === 0) {
       isDeleting = false;
       phraseIndex = (phraseIndex + 1) % phrases.length;
-      speed = 300;
+      speed = 350;
     }
 
     typeTimeout = setTimeout(typeWriter, speed);
