@@ -553,42 +553,128 @@
   }
 
   /* -------------------------------------------------------
-     CONTACT FORM
+     CONTACT FORM — TELEGRAM INTEGRATION
   ------------------------------------------------------- */
+  // Telegram Bot Sozlamalari
+  // 1. @BotFather dan olingan Bot Tokenni kiriting
+  // 2. Guruh Chat ID sini kiriting (odatda -100 bilan boshlanadi)
+  const TELEGRAM_CONFIG = {
+    botToken: '8572391283:AAEuAMHqxeC6bSqmhTe9Qafp1fG_H8Qdyzk',
+    chatId: '-5323474636'
+  };
+
   const contactForm = document.getElementById('contact-form');
   const formStatus = document.getElementById('form-status');
 
+  const SERVICE_NAMES = {
+    mobile: '📱 Mobil Ilova',
+    web: '🌐 Veb-Platforma',
+    backend: '⚙️ Backend Tizimi',
+    design: '🎨 UI/UX Dizayn',
+    branding: '✨ Brending',
+    support: '🛠 Texnik yordam',
+    other: '📌 Boshqa'
+  };
+
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
-      const name = contactForm.querySelector('#contact-name').value.trim();
-      const email = contactForm.querySelector('#contact-email').value.trim();
-      const message = contactForm.querySelector('#contact-message').value.trim();
+      const nameInput = contactForm.querySelector('#contact-name');
+      const emailInput = contactForm.querySelector('#contact-email');
+      const phoneInput = contactForm.querySelector('#contact-phone');
+      const serviceInput = contactForm.querySelector('#contact-service');
+      const messageInput = contactForm.querySelector('#contact-message');
+      const submitBtn = contactForm.querySelector('.form-submit-btn');
 
-      const phone = contactForm.querySelector('#contact-phone') ? contactForm.querySelector('#contact-phone').value.trim() : '';
+      const name = nameInput ? nameInput.value.trim() : '';
+      const email = emailInput ? emailInput.value.trim() : '';
+      const phone = phoneInput ? phoneInput.value.trim() : '';
+      const serviceKey = serviceInput ? serviceInput.value : '';
+      const message = messageInput ? messageInput.value.trim() : '';
 
-      if (!name || !email || !message) {
-        showFormStatus('Iltimos, barcha majburiy maydonlarni to\'ldiring.', 'error');
+      if (!name || (!email && !phone) || !message) {
+        showFormStatus('Iltimos, ismingiz, telefon raqamingiz (yoki email) va xabaringizni kiriting.', 'error');
         return;
       }
-      if (!isValidEmail(email)) {
+
+      if (email && !isValidEmail(email)) {
         showFormStatus('Iltimos, to\'g\'ri elektron pochta manzilini kiriting.', 'error');
         return;
       }
 
-      const submitBtn = contactForm.querySelector('.form-submit-btn');
+      const serviceTitle = SERVICE_NAMES[serviceKey] || (serviceKey ? serviceKey : 'Tanlanmagan');
+
+      // Tugmani yuklanish rejimiga o'tkazish
+      const originalBtnHtml = submitBtn.innerHTML;
       submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Yuborilmoqda...';
       submitBtn.disabled = true;
 
-      // Simulate form submission (replace with actual backend)
-      setTimeout(() => {
-        showFormStatus('✓ Xabaringiz muvaffaqiyatli yuborildi! Tez orada siz bilan bog\'lanamiz.', 'success');
-        contactForm.reset();
-        submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Xabar yuborish';
+      // Agar bot token hali kiritilmagan bo'lsa ogohlantirish
+      if (!TELEGRAM_CONFIG.botToken || TELEGRAM_CONFIG.botToken === 'YOUR_BOT_TOKEN_HERE') {
+        setTimeout(() => {
+          showFormStatus('⚠️ Telegram Bot Token kiritilmagan. Iltimos, main.js faylida botToken va chatId ni to\'ldiring.', 'error');
+          submitBtn.innerHTML = originalBtnHtml;
+          submitBtn.disabled = false;
+        }, 500);
+        return;
+      }
+
+      // Telegram xabari matnini shakllantirish
+      const now = new Date();
+      const timeStr = now.toLocaleDateString('uz-UZ') + ', ' + now.toLocaleTimeString('uz-UZ', { hour: '2-digit', minute: '2-digit' });
+
+      const text = 
+`🚀 <b>Yangi Murojaat — Olab Tech</b>
+
+👤 <b>Mijoz:</b> ${escapeHtml(name)}
+📞 <b>Telefon:</b> ${phone ? escapeHtml(phone) : 'Ko\'rsatilmadi'}
+📧 <b>Email:</b> ${email ? escapeHtml(email) : 'Ko\'rsatilmadi'}
+🛠 <b>Xizmat turi:</b> ${serviceTitle}
+
+💬 <b>Xabar:</b>
+${escapeHtml(message)}
+
+📅 <b>Vaqt:</b> ${timeStr}`;
+
+      try {
+        const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_CONFIG.botToken}/sendMessage`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            chat_id: TELEGRAM_CONFIG.chatId,
+            text: text,
+            parse_mode: 'HTML'
+          })
+        });
+
+        const data = await response.json();
+
+        if (data.ok) {
+          showFormStatus('✓ Xabaringiz muvaffaqiyatli yuborildi! Tez orada siz bilan bog\'lanamiz.', 'success');
+          contactForm.reset();
+        } else {
+          console.error('Telegram API error:', data);
+          showFormStatus('Xatolik yuz berdi: ' + (data.description || 'Xabarni yuborib bo\'lmadi'), 'error');
+        }
+      } catch (err) {
+        console.error('Fetch error:', err);
+        showFormStatus('Tarmoq xatosi. Iltimos, internet aloqangizni tekshiring yoki to\'g\'ridan-to\'g\'ri Telegram orqali bog\'laning.', 'error');
+      } finally {
+        submitBtn.innerHTML = originalBtnHtml;
         submitBtn.disabled = false;
-      }, 1800);
+      }
     });
+  }
+
+  function escapeHtml(str) {
+    if (!str) return '';
+    return str
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
   }
 
   function showFormStatus(message, type) {
@@ -597,7 +683,7 @@
     formStatus.className = 'form-status ' + type;
     setTimeout(() => {
       formStatus.className = 'form-status';
-    }, 5000);
+    }, 6000);
   }
 
   function isValidEmail(email) {
