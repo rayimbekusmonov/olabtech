@@ -385,10 +385,13 @@ h1,h2,h3,h4,h5,h6 {
   width: 80px;
   height: 80px;
   object-fit: contain;
-  border-radius: 18px;
+  border-radius: 50%;
   animation: pulse-glow 2s ease infinite;
   margin-bottom: 4px;
   box-shadow: 0 0 30px rgba(99,102,241,0.5);
+}
+[data-theme="light"] .preloader-logo-img {
+  box-shadow: 0 0 24px rgba(16, 185, 129, 0.3);
 }
 
 /* =========================================================
@@ -445,15 +448,28 @@ h1,h2,h3,h4,h5,h6 {
   width: 44px;
   height: 44px;
   object-fit: contain;
-  border-radius: 10px;
   transition: transform var(--transition-base);
 }
 .navbar-brand:hover .brand-logo-img {
   transform: rotate(-5deg) scale(1.1);
 }
 [data-theme="light"] .brand-logo-img {
-  /* Yangi logo allaqachon to'g'ri rangda — filter shart emas */
   filter: none;
+}
+
+/* Dark / Light logo display toggle */
+.logo-dark {
+  display: block;
+}
+.logo-light {
+  display: none !important;
+}
+
+[data-theme="light"] .logo-dark {
+  display: none !important;
+}
+[data-theme="light"] .logo-light {
+  display: block !important;
 }
 
 /* Nav links */
@@ -849,7 +865,10 @@ h1,h2,h3,h4,h5,h6 {
   flex-wrap: wrap;
 }
 .hero-stat-item {
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 .hero-stat-number {
   font-family: var(--font-display);
@@ -860,13 +879,16 @@ h1,h2,h3,h4,h5,h6 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   line-height: 1;
+  text-align: center;
 }
 .hero-stat-label {
   font-size: 0.8rem;
   color: var(--text-muted);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-top: 4px;
+  letter-spacing: 0.08em;
+  margin-top: 6px;
+  text-align: center;
+  white-space: nowrap;
 }
 .hero-stat-divider {
   width: 1px;
@@ -1760,15 +1782,17 @@ h1,h2,h3,h4,h5,h6 {
 }
 .portfolio-type-badge {
   position: absolute;
-  top: 16px;
-  left: 16px;
+  top: 18px;
+  right: 18px;
+  left: auto;
   padding: 4px 12px;
   border-radius: var(--radius-full);
   font-size: 0.72rem;
   font-weight: 700;
   color: #fff;
   text-transform: uppercase;
-  z-index: 1;
+  z-index: 2;
+  letter-spacing: 0.04em;
 }
 .badge-mobile { background: var(--accent-1); }
 .badge-web    { background: var(--accent-2); }
@@ -2494,8 +2518,10 @@ footer {
     gap: 5px;
     flex-shrink: 0;
   }
-  .portfolio-card-content { padding: 20px 16px 16px; }
-  .portfolio-card-label   { font-size: 0.95rem; }
+  .portfolio-card-content { padding: 20px 16px 16px; gap: 10px; }
+  .portfolio-type-badge   { top: 14px; right: 14px; left: auto; }
+  .portfolio-card-icon-wrap { width: 46px; height: 46px; font-size: 20px; margin-bottom: 6px; }
+  .portfolio-card-label   { font-size: 0.95rem; line-height: 1.35; }
   .portfolio-card-desc    { font-size: 0.78rem; line-height: 1.5; }
   .team-card      { padding: 20px 16px; }
   .back-to-top    { bottom: 16px; right: 16px; width: 40px; height: 40px; font-size: 16px; }

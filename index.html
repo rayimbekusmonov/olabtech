@@ -4,6 +4,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function () {
+      var saved = localStorage.getItem('olab-theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', saved);
+    })();
+  </script>
 
   <!-- SEO Meta Tags -->
   <title>Olab Tech — Mobile va Web Ilovalar Ishlab Chiqish | Toshkent, O'zbekiston</title>
@@ -42,7 +48,8 @@
   ====================================================== -->
   <div id="preloader">
     <div class="preloader-logo">
-      <img src="assets/images/favicon-new.jpg" alt="Olab Tech" class="preloader-logo-img">
+      <img src="assets/images/logowhite.png" alt="Olab Tech" class="preloader-logo-img logo-dark">
+      <img src="assets/images/logoblack.png" alt="Olab Tech" class="preloader-logo-img logo-light">
       <span class="logo-text">Olab Tech</span>
       <div class="preloader-bar">
         <div class="preloader-bar-fill"></div>
@@ -60,7 +67,8 @@
         <!-- Brand -->
         <a href="#hero" class="navbar-brand" id="navbar-brand">
           <div class="brand-icon">
-            <img src="assets/images/favicon-new.jpg" alt="Olab Tech Logo" class="brand-logo-img">
+            <img src="assets/images/logowhite.png" alt="Olab Tech Logo" class="brand-logo-img logo-dark">
+            <img src="assets/images/logoblack.png" alt="Olab Tech Logo" class="brand-logo-img logo-light">
           </div>
           <span>Olab Tech</span>
         </a>
@@ -166,11 +174,6 @@
 
         <!-- Hero Content -->
         <div class="hero-content">
-
-          <div class="hero-badge">
-            <span class="hero-badge-dot"></span>
-            Toshkent, O'zbekiston · 2019 yildan
-          </div>
 
           <h1 class="hero-title">
             Biznesingiz uchun<br>
@@ -1322,7 +1325,10 @@
           <!-- Brand -->
           <div class="footer-brand">
             <div class="footer-brand-logo">
-              <div class="brand-icon">O</div>
+              <div class="brand-icon">
+                <img src="assets/images/logowhite.png" alt="Olab Tech Logo" class="brand-logo-img logo-dark">
+                <img src="assets/images/logoblack.png" alt="Olab Tech Logo" class="brand-logo-img logo-light">
+              </div>
               <span>Olab Tech</span>
             </div>
             <p class="footer-brand-desc">
