@@ -2138,7 +2138,7 @@ h1,h2,h3,h4,h5,h6 {
 .form-group input,
 .form-group select,
 .form-group textarea {
-  background: var(--bg-card);
+  background-color: var(--bg-card);
   border: 1.5px solid var(--border-color);
   border-radius: var(--radius-md);
   padding: 14px 16px;
@@ -2154,29 +2154,45 @@ h1,h2,h3,h4,h5,h6 {
 .form-group select:focus,
 .form-group textarea:focus {
   border-color: var(--accent-1);
-  background: var(--bg-card-hover);
+  background-color: var(--bg-card-hover);
   box-shadow: 0 0 0 3px rgba(99,102,241,0.1);
 }
-.form-group select {
+
+/* Custom Select Wrapper */
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
+.select-wrapper select {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   cursor: pointer;
   color-scheme: dark;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%238b98b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 16px center;
-  background-size: 16px;
   padding-right: 44px;
 }
+.select-wrapper .select-arrow {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+.select-wrapper select:focus ~ .select-arrow {
+  color: var(--accent-1);
+  transform: translateY(-50%) rotate(180deg);
+}
+
 .form-group select option {
   background-color: #0f1629;
   color: #f0f4ff;
   padding: 12px 14px;
 }
-[data-theme="light"] .form-group select {
+[data-theme="light"] .select-wrapper select {
   color-scheme: light;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
 }
 [data-theme="light"] .form-group select option {
   background-color: #ffffff;
