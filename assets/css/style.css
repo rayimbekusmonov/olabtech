@@ -10,6 +10,7 @@
    CSS CUSTOM PROPERTIES (DESIGN TOKENS)
    ========================================================= */
 :root {
+  color-scheme: dark;
   /* Colors — Dark Theme (default) */
   --bg-primary:      #0a0e1a;
   --bg-secondary:    #0f1629;
@@ -54,6 +55,7 @@
 
 /* Light Theme */
 [data-theme="light"] {
+  color-scheme: light;
   --bg-primary:      #f8faff;
   --bg-secondary:    #eef2ff;
   --bg-card:         rgba(255,255,255,0.9);
@@ -2155,7 +2157,31 @@ h1,h2,h3,h4,h5,h6 {
   background: var(--bg-card-hover);
   box-shadow: 0 0 0 3px rgba(99,102,241,0.1);
 }
-.form-group select { appearance: none; cursor: pointer; }
+.form-group select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  color-scheme: dark;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%238b98b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 16px;
+  padding-right: 44px;
+}
+.form-group select option {
+  background-color: #0f1629;
+  color: #f0f4ff;
+  padding: 12px 14px;
+}
+[data-theme="light"] .form-group select {
+  color-scheme: light;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+}
+[data-theme="light"] .form-group select option {
+  background-color: #ffffff;
+  color: #0f172a;
+}
 .form-group textarea { min-height: 140px; resize: vertical; }
 
 .form-submit-btn {
@@ -2546,8 +2572,8 @@ footer {
   .brand-logo-img    { width: 36px; height: 36px; }
 
   .form-group input,
-  .form-group textarea,
-  .form-group select { padding: 12px 14px; font-size: 16px; }
+  .form-group textarea { padding: 12px 14px; font-size: 16px; }
+  .form-group select   { padding: 12px 40px 12px 14px; font-size: 16px; }
 }
 
 /* ---- Very small phones — Galaxy A / older iPhones (below 360px) ---- */
