@@ -1,4 +1,4 @@
-﻿/* =========================================================
+/* =========================================================
    Olab Tech - i18n (Internationalization)
    Tillar: O'zbek (uz) | Russkiy (ru) | English (en)
    ========================================================= */
@@ -81,7 +81,10 @@
     }
   };
 
-  var currentLang = localStorage.getItem('olab-lang') || 'uz';
+  var currentLang = 'uz';
+  try {
+    currentLang = localStorage.getItem('olab-lang') || 'uz';
+  } catch (e) {}
 
   function applyTranslations(lang) {
     var t = translations[lang];
@@ -157,7 +160,9 @@
     });
 
     document.documentElement.lang = lang;
-    localStorage.setItem('olab-lang', lang);
+    try {
+      localStorage.setItem('olab-lang', lang);
+    } catch (e) {}
     currentLang = lang;
   }
 

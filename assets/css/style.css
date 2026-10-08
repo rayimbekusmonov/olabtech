@@ -3,8 +3,7 @@
    Author: Antigravity | 2026
    ========================================================= */
 
-/* ----- Google Fonts Import ----- */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+/* ----- Font System (loaded via index.html link with display=swap; fallback stack below) ----- */
 
 /* =========================================================
    CSS CUSTOM PROPERTIES (DESIGN TOKENS)
@@ -43,8 +42,8 @@
   --radius-xl:       32px;
   --radius-full:     9999px;
 
-  --font-sans:       'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-display:    'Space Grotesk', var(--font-sans);
+  --font-sans:       'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-display:    'Space Grotesk', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
   --transition-fast: 0.15s ease;
   --transition-base: 0.3s ease;
@@ -337,17 +336,35 @@ h1,h2,h3,h4,h5,h6 {
    ========================================================= */
 #preloader {
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
   inset: 0;
-  z-index: 9999;
+  z-index: 99999;
   background: var(--bg-primary);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-transition: opacity 0.5s ease, visibility 0.5s ease;
   transition: opacity 0.5s ease, visibility 0.5s ease;
+  pointer-events: auto;
 }
 #preloader.hidden {
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
 }
 .preloader-logo {
   display: flex;

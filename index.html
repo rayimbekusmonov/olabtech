@@ -6,8 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>
     (function () {
-      var saved = localStorage.getItem('olab-theme') || 'dark';
-      document.documentElement.setAttribute('data-theme', saved);
+      try {
+        var saved = localStorage.getItem('olab-theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', saved);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
     })();
   </script>
 
@@ -56,6 +60,95 @@
       </div>
     </div>
   </div>
+
+  <noscript>
+    <style>
+      #preloader { display: none !important; }
+    </style>
+  </noscript>
+
+  <!-- Preloader Fail-Safe Script (Mustaqil, Safari 12+ ES5) -->
+  <script>
+    (function () {
+      var preloader = document.getElementById('preloader');
+      if (!preloader) return;
+
+      var isHidden = false;
+      var fallbackTimer = null;
+
+      function hidePreloader() {
+        if (isHidden) return;
+        isHidden = true;
+
+        if (fallbackTimer) {
+          clearTimeout(fallbackTimer);
+          fallbackTimer = null;
+        }
+
+        // 1. CSS klassi orqali yashirish
+        if (preloader.classList) {
+          preloader.classList.add('hidden');
+        } else {
+          preloader.className += ' hidden';
+        }
+
+        // 2. Inline fail-safe stillar (CSS yuklanmagan yoki bloklangan taqdirda ham)
+        preloader.style.opacity = '0';
+        preloader.style.visibility = 'hidden';
+        preloader.style.pointerEvents = 'none';
+
+        // 3. Sahifa skroll va bosishga to'liq ochiq bo'lishini ta'minlash
+        try {
+          if (document.body) {
+            document.body.style.overflow = '';
+            document.body.style.pointerEvents = '';
+          }
+          if (document.documentElement) {
+            document.documentElement.style.overflow = '';
+          }
+        } catch (e) {}
+
+        // 4. Tranzit animatsiyasidan keyin DOM daraxtida ko'rinmas qilish
+        setTimeout(function () {
+          try {
+            preloader.style.display = 'none';
+          } catch (e) {}
+        }, 500);
+      }
+
+      // Global foydalanish uchun eksport
+      window.hidePreloader = hidePreloader;
+
+      // FAIL-SAFE TRIGGERLAR:
+      // A) Maksimal 3 soniya (har qanday holatda, nima bo'lishidan qat'i nazar yopiladi)
+      fallbackTimer = setTimeout(hidePreloader, 3000);
+
+      // B) window "load" hodisasi (barcha resurslar tez yuklanganda tabiiy 900ms animatsiyadan so'ng)
+      if (window.addEventListener) {
+        window.addEventListener('load', function () {
+          setTimeout(hidePreloader, 900);
+        });
+      } else if (window.attachEvent) {
+        window.attachEvent('onload', function () {
+          setTimeout(hidePreloader, 900);
+        });
+      }
+
+      // C) DOMContentLoaded hodisasi (DOM daraxti tayyor bo'lgach 1.8 soniyada yopiladi)
+      if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', function () {
+          setTimeout(hidePreloader, 1800);
+        });
+      }
+
+      // D) window "error" hodisasi (biror skript yoki resursda xato chiqsa, foydalanuvchi qotib qolmasligi uchun)
+      if (window.addEventListener) {
+        window.addEventListener('error', function () {
+          hidePreloader();
+        });
+      }
+    })();
+  </script>
 
   <!-- ======================================================
        NAVBAR
