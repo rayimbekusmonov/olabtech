@@ -403,16 +403,24 @@
       const filter = btn.getAttribute('data-filter');
 
       portfolioItems.forEach(item => {
-        const category = item.getAttribute('data-category');
-        if (filter === 'all' || category === filter) {
-          item.style.opacity = '1';
-          item.style.transform = 'scale(1)';
+        const catStr = item.getAttribute('data-category') || '';
+        const cats = catStr.split(/\s+/);
+        const matches = (filter === 'all' || cats.includes(filter));
+
+        if (matches) {
           item.style.display = '';
+          requestAnimationFrame(() => {
+            item.style.opacity = '1';
+            item.style.transform = 'scale(1)';
+          });
         } else {
           item.style.opacity = '0';
-          item.style.transform = 'scale(0.9)';
+          item.style.transform = 'scale(0.92)';
           setTimeout(() => {
-            if (btn.getAttribute('data-filter') !== 'all' && item.getAttribute('data-category') !== btn.getAttribute('data-filter')) {
+            const activeBtn = document.querySelector('.filter-btn.active');
+            const currentFilter = activeBtn ? activeBtn.getAttribute('data-filter') : 'all';
+            const curCats = (item.getAttribute('data-category') || '').split(/\s+/);
+            if (currentFilter !== 'all' && !curCats.includes(currentFilter)) {
               item.style.display = 'none';
             }
           }, 300);
